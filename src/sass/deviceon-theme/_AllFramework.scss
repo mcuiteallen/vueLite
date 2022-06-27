@@ -1,0 +1,302 @@
+*{
+	-webkit-overflow-scrolling: touch;
+	overflow-anchor:none
+}
+body {
+	#app {
+		height: 100%;
+		-webkit-overflow-scrolling: touch;
+	}
+	.layout{
+		position: relative;
+		-webkit-overflow-scrolling: touch;
+		@media screen and (max-width: 991px){
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.fa, .fas, .far, .fal, .fad, .fab{
+	line-height: inherit;
+}
+
+h4{
+	color: $text-color
+}
+a{
+	color: $main-theme;
+	&:hover{
+		color: $text-color;
+	}
+}
+input{
+	color: $text-color !important;
+	background: none;
+	border: 1px solid $border-color;
+}
+
+
+//-------------------------------為了Footer要在底下
+.layout-content{
+	min-height: calc(100vh - 40px);
+}
+
+
+//-------------------------------widget 的header不要高度
+.no-header{
+	.vuestic-widget-header{
+		height: 0 !important;
+    padding: 0 !important;
+	}
+}
+
+
+//-------------------------------widget-header右邊按鈕
+.btn-showModal{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+// -------------------------------更多功能
+.more-link{
+	color: $main-theme;
+	border-bottom:1px solid;
+	font-size: 14px;
+	white-space: nowrap;
+	margin: 7px 10px;
+	&:hover, &.active{
+		background-color: $main-theme-light;
+	}
+}
+
+//-------------------------------延伸功能(通知的"測試"版面)
+.extendTool{
+	background: #eaeaea;
+	border: 1px solid #bbbbbb;
+	padding: 12px;
+	position: relative;
+	margin-top: 9px;
+	&::before{
+		content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #eaeaea;
+    right: 31px;
+    top: -5px;
+    border-top: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    transform: rotate(45deg);
+	}
+}
+
+
+//-------------------------------上傳圖片
+.box-uploadImg{
+	position: relative;
+	.img-input{
+		position: absolute;
+		opacity: 0;
+		z-index: 1;
+		width: 100%;
+	}
+}
+
+
+//-------------------------------onboarding
+.addGroup{
+	.vuestic-collapse__header{
+		position: absolute;
+		top: -9px;
+    right: 0;
+	}
+	.vuestic-collapse__header__button:hover{
+		background-color: transparent;
+	}
+}
+
+
+
+
+
+//-------------------------------顯示無資料訊息
+.show-unavailable{
+	width: 100%;
+	height: 360px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	i{
+		font-size: 76px;
+		// color: $main-theme;
+	}
+}
+.show-unavailable-H350{
+	height: 350px;
+  line-height: 350px;
+  text-align: center;
+}
+.show-unavailable-H200{
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+}
+.title-unavailable{
+	font-size: 19px;
+	font-weight: 500;
+}
+.text-unavailable{
+	font-size: 16px;
+	font-weight: initial;
+}
+
+
+//------------------------------- 更新包製作(上傳檔案)
+.package-file{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid $border-color;
+}
+
+
+//------------------------------- 步驟版面
+.body-padding-0{
+  .wizard-body{
+    padding: 0px !important;
+	}
+	.wizard-body-step{
+		// padding:0 20px;
+	}
+}
+
+
+//------------------------------- 規則引擎
+// (新增規則/詳細模式)
+.title-collapse-second{
+	height: 43px;
+	background: $main-theme-light;
+	line-height: 43px;
+	padding-left: 12px;
+	border: 1px solid $main-theme;
+}
+.title-collapse-noData {
+	background: transparent;
+    text-align: center;
+    height: 43px;
+    border: 1px solid $main-theme;
+    line-height: 43px;
+}
+.li-select{
+	padding: 10px;
+	padding-left: 3rem;
+	cursor: pointer;
+	&:hover{
+		background: $main-theme-light-2;
+	}
+}
+.li-isSelect{
+	background: $main-theme-light;
+	color: $main-theme;
+}
+
+
+//------------------------------- 新增儀錶板
+.radio-isSelect{
+	color: $main-theme;
+}
+.title-has-edit{
+	position: relative;
+	.btn-edit{
+		position: absolute;
+		top: -6px;
+    right: 0;
+	}
+}
+
+
+//------------------------------- toggle按鈕
+.vue-js-switch{
+	margin-bottom:0px !important;
+}
+
+
+//------------------------------- 間距
+.mb-3{
+	@include PC-small{
+		margin-bottom: 0.5rem !important;
+	}
+}
+
+
+
+
+.more-function-tooltip{
+	pointer-events: none !important;
+	.PopoverContent{
+		&>div{
+			cursor: pointer;
+			font-size: 16px;
+			padding: 0px 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 40px;
+			border-bottom: 1px solid #b8b6b9;
+			&:last-child{
+				border-bottom: 0px;
+			}
+			svg{
+				width: 26px;
+				height: 26px;
+			}
+		}
+	}
+	&.open{
+		pointer-events: all !important;
+	}
+}
+
+.cls-1{fill:$main-theme;}.cls-2{fill:#fff;}
+.cls-3{fill:$main-theme-light;}
+.cls-4{fill:$main-theme-light-2;}
+
+
+.login-new{
+	.disable{
+		opacity: 0.5;
+		cursor: no-drop !important;
+		label, span{
+			pointer-events: none;
+		}
+	}
+}
+
+.title {
+	font-size: 18px;
+	font-weight: bold;
+}
+.center {
+	text-align: center;
+}
+// -------------------------- media notes
+// @include media-breakpoint-down()
+
+// xs  576 px 開始以下  
+// sm  768 px 開始以下  
+// md  992 px 開始以下  
+// lg	 1200 px 開始以下 
+// xl  1200 px 以上
+
+
+//deviceOn media 
+
+// @include PC-middle {1500px}
+// @include PC-small {1400px}
+
+// advantech notepad 1350x414

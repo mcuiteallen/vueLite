@@ -1,0 +1,21 @@
+// loding
+.vld-overlay .vld-background{
+	transition: all 0.3s;
+	background: $body-bg !important;
+	opacity: 0.5 !important;
+}
+.vld-overlay.is-full-page{
+	transition: all 0.3s;
+}
+.vld-overlay.is-active{
+	transition: all 0.3s;
+	.vld-background{
+		opacity: 0.8 !important;
+	}
+}
+.vld-icon{
+	&>svg{
+		fill: $main-theme;
+		stroke: $main-theme;
+	}
+}

@@ -1,0 +1,7 @@
+1. 將開發好的 iEdge-server-addins 打包成 dist 放入 最新或指定版本的DeviceOn的打包目錄dist中的 \static\addins\ 並取名為 iEdge-addins
+
+2. 將iEdge-addins中 \static 的 defaultConfigNew.json logo 複製到 DeviceOn的打包目錄dist中的 \static
+ 
+3. 在DeviceOn的打包目錄dist中放入Config_portals.json
+
+4. 打開 SolutionWrapper_1.0.6_portable.exe 執行打包 取得兩個zip檔

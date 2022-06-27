@@ -1,0 +1,302 @@
+//Navbar
+.navbar .navbar-nav > .nav-item > .nav-link {
+  padding-right: 38px;
+  padding-left: 38px;
+  line-height: 0;
+}
+
+.navbar .navbar-nav > .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-text {
+  color: $white;
+}
+
+.blockquote {
+  padding: 0 ($spacer *1.625);
+  margin: 2.5rem 0 2.5rem 1rem;
+  border-left: $blockquote-border-width solid $blockquote-border-color;
+  line-height: 2rem;
+  color: $blockquote-small-color;
+  font-style: oblique;
+}
+
+.blockquote-footer {
+  &::before {
+    content: "--- "; // em dash, nbsp
+  }
+}
+
+// Dropdowns & Selects
+.dropdown-menu {
+  border-radius: 0;
+  padding: $dropdown-menu-padding-y $dropdown-menu-padding-x;
+  background: transparent;
+  border: none;
+  .dropdown-menu-content {
+    background-color: $dashbordcontent-bg;
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: $dropdown-item-height;
+  font-size: $font-size-sm;
+  color: $text-color;
+  &:hover, &:focus{
+    background-color: $main-theme;
+    color: #ffffff !important;
+  }
+  &.active{
+    background-color: $main-theme-light-2;
+    div{
+      color: $main-theme;
+    }
+  }
+}
+
+//Grid
+.row > .col-8-custom {
+  @include media-breakpoint-between(md, xl) {
+    width: 12.5%;
+  }
+
+  @include media-breakpoint-only(sm) {
+    width: 25%;
+  }
+
+  @include media-breakpoint-only(xs) {
+    width: 100%;
+  }
+}
+
+//Tables
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    border: 1px solid $border-color;
+  }
+  tbody tr:nth-of-type(even) {
+    background-color: rgba(0,0,0,0.07);
+    border: 1px solid $border-color;
+  }
+}
+
+.table-bordered {
+  td, th {
+    border: 1px solid $border-color;
+  }
+}
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: rgba(255,255,255,0.03);
+    }
+  }
+}
+
+.table {
+  thead tr {
+    border: 1px solid $border-color;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  td, th, thead th, thead td {
+    vertical-align: middle !important;
+    padding: .5rem;
+  }
+
+  .badge {
+    vertical-align: text-top;
+  }
+
+  .table-info {
+    background-color: #dcf1ff;
+  }
+
+  .table-warning {
+    background-color: #fff1c8;
+  }
+
+  .table-success, .table-success > td, .table-success > th {
+    background-color: #c8fac6;
+  }
+
+  .table-danger {
+    background-color: #ffcece;
+  }
+}
+
+.table-header-active {
+  thead tr {
+    color: $vue-green;
+  }
+}
+
+.first-td-padding {
+  td:first-child {
+    @extend .pl-4;
+  }
+}
+
+.sort-icon {
+  float: none !important;
+  margin-left: .2rem;
+  top: 1px;
+  font-size: 1rem;
+}
+
+th.sortable:hover {
+  color: $vue-green !important;
+  opacity: .6;
+}
+
+//Badges
+@mixin badge-variant($bg) {
+  color: $white;
+  background-color: $bg;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+      text-decoration: none;
+      background-color: darken($bg, 10%);
+    }
+  }
+}
+
+.badge {
+  min-width: $badge-min-width;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: .625rem;
+  color: $white;
+  letter-spacing: .0625rem;
+}
+
+.badge-violet {
+  @include badge-variant($theme-violet);
+}
+
+.badge-dark-blue {
+  @include badge-variant($dark-blue);
+}
+
+.badge-success {
+  @include badge-variant($badge-success-bg);
+}
+
+.badge-purple {
+  @include badge-variant($dark-purple);
+}
+
+.badge-gray {
+  @include badge-variant($text-gray);
+}
+
+//Alerts
+.alert {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .badge {
+    margin-right: 0.63rem;
+  }
+
+  &.with-close {
+    padding-right: $with-close-pr;
+  }
+
+  .alert-close {
+    position: absolute;
+    right: 20px;
+    font-size: $font-size-base;
+    top: calc(50% - #{$font-size-base} / 2);
+    cursor: pointer;
+  }
+}
+
+.alert-success {
+  box-shadow: $alert-success-shadow;
+
+  .alert-close {
+    color: $brand-primary;
+  }
+}
+
+.alert-warning {
+  box-shadow: $alert-warning-shadow;
+
+  .alert-close {
+    color: $brand-warning;
+  }
+}
+
+.alert-danger {
+  box-shadow: $alert-danger-shadow;
+
+  .alert-close {
+    color: $brand-danger;
+  }
+}
+
+.alert-info {
+  box-shadow: $alert-info-shadow;
+
+  .alert-close {
+    color: $brand-info;
+  }
+}
+
+@function get-alert-def($type, $csspart) {
+  @if $csspart == 'bg' {
+    @if $type == 'success' {
+      @return $alert-success-bg;
+    } @else if $type == 'danger' {
+      @return $alert-danger-bg;
+    } @else if $type == 'warning' {
+      @return $alert-warning-bg;
+    } @else if $type == 'info' {
+      @return $alert-info-bg;
+    }
+
+    @return theme-color-level($type, -10);
+  } @else if $csspart == 'border' {
+    @if $type == 'success' {
+      @return $alert-success-border;
+    } @else if $type == 'danger' {
+      @return $alert-danger-border;
+    } @else if $type == 'warning' {
+      @return $alert-warning-border;
+    } @else if $type == 'info' {
+      @return $alert-info-border;
+    }
+
+    @return theme-color-level($type, -9);
+  } @else if $csspart == 'color' {
+    @if $type == 'success' {
+      @return $alert-success-text;
+    } @else if $type == 'danger' {
+      @return $alert-danger-text;
+    } @else if $type == 'warning' {
+      @return $alert-warning-text;
+    } @else if $type == 'info' {
+      @return $alert-info-text;
+    }
+
+    @return theme-color-level($type, 6);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(get-alert-def($color, 'bg'), get-alert-def($color, 'border'), get-alert-def($color, 'color'));
+  }
+}

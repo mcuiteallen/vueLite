@@ -1,0 +1,342 @@
+{
+	"home": "Home",  
+	"logo": {
+	  "login": "E2I.APP-ICONLOGIN.svg",
+	  "loginM": "E2I.APP-ICONLOGIN.svg",
+	  "loginPage": "cloudBackground.jpeg",
+	  "inPage": "E2I.APP-ICON.svg"
+	},
+	"colorsNew": [
+		{
+			"themeType":         "no",
+			"loginBgTop":        "",
+			"loginBgBottom":     ""
+		},
+		{
+			"themeType":         "cus-default",
+			"themeName":         "初始版",
+			"bodyBg":              "",
+			"headerBg":            "",
+			"menuBg":              "",
+			"dashbordheaderBg":    "",
+			"dashbordcontentBg":   "",
+			"tabletroddBg":        "",
+			"tabletrevenBg":       "",
+			"textColor":           "",
+			"borderColor":         "",
+			"mainTheme":           "",
+			"navIcon":			   "",
+			"enable":            true
+		},
+		{
+			"themeType":         "cus-light",
+			"themeName":         "明亮版",
+			"bodyBg":            "",
+			"headerBg":          "",
+			"menuBg":            "",
+			"dashbordheaderBg":  "",
+			"dashbordcontentBg": "",
+			"tabletroddBg":      "",
+			"tabletrevenBg":     "",
+			"textColor":         "",
+			"borderColor":       "",
+			"mainTheme":         "",
+			"navIcon":					 "#FFF3FE",
+			"enable":            false
+		},
+		{
+		"themeType":         	 "cus-dark",
+		"themeName":         	 "暗黑版",
+		"bodyBg":              "#0E0E0E",
+		"headerBg":            "#151515",
+		"menuBg":              "#151515",
+		"dashbordheaderBg":    "#1B1B1B",
+		"dashbordcontentBg":   "#1B1B1B",
+		"tabletroddBg":        "#242323",
+		"tabletrevenBg":       "#1B1B1B",
+		"textColor":           "#FFFFFF",
+		"borderColor":         "#2F2F2F",
+		"mainTheme":           "#3289A2",
+		"navIcon":					   "#107390",
+		"enable":              false
+		},
+		{
+		"themeType":         	 "cus-green",
+		"themeName":           "樣式一",
+		"bodyBg":              "",
+		"headerBg":            "",
+		"menuBg":              "",
+		"dashbordheaderBg":    "",
+		"dashbordcontentBg":   "",
+		"tabletroddBg":        "",
+		"tabletrevenBg":       "",
+		"textColor":           "",
+		"borderColor":         "",
+		"mainTheme":           "#137953",
+		"navIcon":					   "#26bdb4",
+		"enable":              false
+		}
+	],
+	"navbar": {
+	  "color": true
+	},
+	"iEdgeDownload": "https://support.advantech.com/support/SearchResult.aspx?keyword=DeviceOn%2fiEdge&searchtabs=BIOS,Certificate,Datasheet,Documentation,Driver,Firmware,Manual,Online%20Training,Software%20Utility,Utility,FAQ,Installation,Software%20API,Software%20API%20Manual,3D%20Model,Quick%20Start%20Guide,Reference,eCatalog,Video,Webcast,Whitepaper,SDK,OS&select_tab=Utility",
+	"breadcrumbs": true, 
+	"menus": [
+		{
+			"enable": true,
+			"label": "deviceon.menu.home",
+			"router": "Home"
+		},	
+		{
+			"enable": true,
+			"label": "deviceon.menu.customizeDashboard",
+			"tag": "dashboards",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.submenu.customizeDashboardSetting",
+					"router": "dashboards",
+					"type": "setting"
+				}
+			]
+		},	
+		{
+			"enable": true,
+			"label": "EIS",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.device.devicelist",
+					"router": "DeviceList"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.device.devicemonitoring",
+					"router": "DeviceMonitoring"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.device.deviceRemotecontrol",
+					"router": "DeviceRemoteControl"
+				}
+			]
+		},
+		{
+			"enable": true,
+			"label": "iEdge.menu.plugin",
+			"menu": [
+				{
+					"enable": true,
+					"label": "iEdge.menu.pluginList",
+					"router": "DeviceData"
+				},
+				{
+					"path": "static/addins/iEdge-addins/#/eisPluginConfig",
+					"router": "addins",
+					"enable": true,
+					"label": "iEdge.menu.pluginConfig"
+				}			
+			]
+		},		
+		{
+			"enable": true,
+			"label": "iEdge.menu.event",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.event",
+					"router": "EventAlert"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.setting.notification",
+					"router": "SettingNotification"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.setting.action",
+					"router": "SettingAction"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.device.devicerule",
+					"router": "DeviceRuleEngine"
+				},
+				{
+					"enable": false,
+					"label": "deviceon.menu.device.anomalyDetection",
+					"router": "AnomalyDetection"
+				}
+			]
+		},	
+				{
+			"enable": true,
+			"label": "deviceon.menu.setting.setting",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.device.deviceprovision",
+					"router": "DeviceProvision"
+				},		
+				{
+					"enable": true,
+					"label": "deviceon.menu.account",
+					"router": "AccountList"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.device.devicegroup",
+					"router": "DeviceGroup"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.setting.productactivation",
+					"router": "SettingProductActivation"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.setting.systemUI",
+					"router": "SettingSystemUI"
+				},
+				{
+					"path": "static/addins/iEdge-addins/#/iEdgeDownload",
+					"router": "addins",
+					"enable": true,
+					"label": "iEdge.menu.iEdgeDownload"
+				}	
+			]
+		},	
+		{
+			"path": "static/addins/iEdge-addins/#/UserManual",
+			"router": "addins",
+			"enable": false,
+			"label": "iEdge.menu.userManual"
+		},		
+		{
+			"enable": false,
+			"label": "deviceon.menu.device.deviceIPMI",
+			"router": "DeviceIPMI"
+		},
+		{
+			"enable": false,
+			"label": "deviceon.menu.ota.ota",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.ota.otaStorage",
+					"router": "OTAStorage"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.ota.otaPackage",
+					"router": "OTAPackage"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.ota.otaUpgrade",
+					"router": "OTAUpgrade"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.ota.otaConfiguration",
+					"router": "OTAConfiguration"
+				}
+			]
+		},
+		{
+			"enable": true,
+			"label": "deviceon.menu.appstore.appstore",
+			"tag": "appstore",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.appstore.appstoreApplication",
+					"router": "AppStoreApplication"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.appstore.appstoreUpgrade",
+					"router": "AppStoreUpgrade"
+				},
+				{
+					"enable": true,
+					"label": "deviceon.menu.appstore.appstoreStorage",
+					"router": "AppStorePackage"
+				}
+			]
+		},					
+		{
+			"enable": false,
+			"label": "deviceon.menu.addins",
+			"tag": "addins",
+			"menu": [
+				{
+					"enable": true,
+					"label": "deviceon.menu.submenu.addinsSetting",
+					"router": "addins",
+					"type": "setting"
+				}
+			]
+		},
+		{
+			"enable": false,
+			"label": "deviceon.menu.systemReport",
+			"router": "SystemReport"
+		}	
+	],
+	"overview": [
+		{
+			"enable": true,
+			"label": "deviceon.dashboard.realtime",
+			"name": "action"
+		},
+		{
+			"enable": true,
+			"label": "deviceon.dashboard.event",
+			"name": "event"
+		},
+		{
+			"enable": true,
+			"label": "deviceon.dashboard.system",
+			"name": "system"
+		},
+		{
+			"enable": true,
+			"label": "deviceon.dashboard.status",
+			"name": "status"
+		},
+		{
+			"enable": true,
+			"label": "deviceon.dashboard.rank",
+			"name": "rank"
+		},
+		{
+			"enable": true,
+			"label": "deviceon.dashboard.map",
+			"name": "map"
+		}
+	],
+	"Tour": false,
+	"SwitchBtn": false,
+	"PoweredByWisePaas": false,
+	"Company":{
+		"favicon": "/favicon.ico",
+		"product": "",
+		"name": "",
+		"url": "",
+		"sso": "",
+		"nonsso": "",
+		"server": "",
+		"agent": "",
+		"agentURL": "",
+		"contactus": "mailto:DeviceOn.Support@advantech.com",
+		"eula": "/EULA/DeviceOn_EULA.html"
+	},
+	"version": "",
+	"IDS": true,
+	"ARK": true,
+	"navSubtitle": "",
+	"defaultTheme": "Blue",
+	"product": "iEdge"
+}

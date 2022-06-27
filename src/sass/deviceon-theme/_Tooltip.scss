@@ -1,0 +1,128 @@
+//-------------------------------提示
+.tooltip{
+	opacity: 1;
+}
+.tooltip.vuestic-tooltip .tooltip-inner{
+	background-color: $dashbordcontent-bg !important;
+}
+.tooltip.vuestic-tooltip.popover .popover-body{
+	color: $text-color !important;
+}
+.tooltip.vuestic-tooltip{
+	.tooltip-arrow{
+		&::before{
+			top: 0px !important;
+		}
+	}
+}
+.tooltip{
+	
+	.tooltip-inner{
+    padding: 6px 10px;
+    background-color: #343434;
+		border-radius: 0.2rem;
+		font-size: 15px;
+		max-width: 250px;
+	}
+}
+.tooltip.vue-tooltip-theme{
+	pointer-events: none;
+}
+.tooltip.tooltip-has-event{
+	pointer-events: auto;
+}
+
+.tooltip[x-placement="top"]{
+	.tooltip-arrow{
+		&::before{
+			content:"";
+			width: 0px;
+			height: 0px;
+			border-color: #343434 transparent transparent transparent;
+			border-width: 8px 6px 0px;
+			border-style: solid solid solid solid;
+			position: absolute;
+			bottom: -8px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+.tooltip[x-placement="bottom"]{
+	.tooltip-arrow{
+		&::before{
+			content:"";
+			width: 0px;
+			height: 0px;
+			border-color: transparent transparent #343434 transparent;
+			border-width: 0px 6px 8px;
+			border-style: solid solid solid solid;
+			position: absolute;
+			top: -8px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+// 右上角的提示訊息
+.toasted-container.top-right {
+	top: 6% !important;
+	right: 1% !important;
+}
+
+
+
+// 客製
+.tooltip-schedule-actionStop{
+	left: -22px !important;
+	top: 3px !important;
+}
+.tooltip-schedule-delete{
+	left: -5px !important;
+}
+.mapTootip {
+	left: 0px !important;
+	top: -4px !important;
+	.tooltip-inner{
+		border-radius: 0;
+		max-width: 200px;
+		.marquee{
+			margin-bottom: 0;
+			height: 22px;
+    	width: 180px;
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s;
+			span{
+				position: absolute;
+				white-space: nowrap;
+				animation: marquee 11s infinite linear;
+			}
+			&:hover{
+				height: 90px;
+    		overflow-y: scroll;
+				span{
+					left: 0;
+					width: 100%;
+					padding-right: 5px;
+					white-space:inherit;
+					animation: none;
+				}
+			}
+		}
+	}
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before, .tooltip.vuestic-tooltip[x-placement^="bottom"] .arrow::before, .bs-tooltip-bottom .tooltip.vuestic-tooltip .tooltip-arrow::before, .tooltip.vuestic-tooltip .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .tooltip.vuestic-tooltip .tooltip-arrow::before, .tooltip.vuestic-tooltip .bs-tooltip-auto[x-placement^="bottom"] .tooltip-arrow::before, .tooltip.vuestic-tooltip[x-placement^="bottom"] .tooltip-arrow::before{
+	border-bottom-color: $main-theme;
+}

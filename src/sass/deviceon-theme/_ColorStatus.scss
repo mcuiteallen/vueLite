@@ -1,0 +1,108 @@
+//狀態顏色
+.icon-dot{
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-bottom: -1px;
+	margin-right: 5px;
+	&-big{
+		width: 15px;
+		height: 15px;
+	}
+}
+
+.icon-success{
+	background: #38a277;
+}
+.text-success{
+	color: #38a277 !important;
+}
+.icon-folder {
+	color: #f7cc36;
+}
+.icon-warning{
+	background: #f7cc36;
+}
+.icon-danger{
+	background: #af2134;
+}
+
+.Connected{
+	background-color: #38a277;
+}
+.Disconnected{
+	background-color: #999999;
+}
+.Disconnect{
+	background-color: #999999;
+}
+.Abnormal{
+	background-color: #af2134;
+}
+
+.connected{
+	background-color: #38a277;
+}
+.disconnected{
+	background-color: #999999;
+}
+.abnormal{
+	background-color: #af2134;
+}
+
+
+.online{
+	color: #38a277;
+}
+.offline{
+	color: #999999;
+}
+.abnormal {
+  color: #af2134;
+}
+
+.color-information{
+	color: #38a277;
+	background-color: #38a277;
+}
+.color-warning{
+	color: #e2d134;
+	background-color: #e2d134;
+}
+.color-danger{
+	color: #af2134;
+	background-color: #af2134;
+}
+.Error{
+	background-color: #af2134;
+}
+
+.color-enable{
+  color: #38a277;
+  background-color: #38a277;
+}
+.color-disable {
+  color: #999999;
+  background-color: #999999;
+}
+
+
+.theme-color{
+	color: $main-theme;
+}
+.fill-bg-color{
+	fill: $dashbordcontent-bg;
+}
+.fill-theme-color{
+	fill: $main-theme;
+}
+.fill-text-color{
+	fill: $text-color;
+}
+.stroke-text-color{
+	stroke: $text-color;
+}
+.stroke-theme-color{
+	stroke: $main-theme;
+}

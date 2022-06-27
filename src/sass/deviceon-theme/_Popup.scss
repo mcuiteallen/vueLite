@@ -1,0 +1,161 @@
+//-------------------------------popUp  成功/ 警告/ 錯誤
+.swal2-title{
+	font-size: 24px;
+	word-break: break-word;
+}
+.swal2-content{
+	font-size: 18px;
+}
+.swal2-container{
+	//成功------
+	//圈圈
+	.swal2-icon.swal2-success .swal2-success-ring{
+		border: .25em solid #99dea6;
+	}
+	//打勾
+	.swal2-icon.swal2-success [class^=swal2-success-line]{
+		background-color: #99dea6;
+		border-radius: 0;
+	}
+	// 警告-----
+	//圈圈+驚嘆號
+	.swal2-icon.swal2-warning{
+		border-color: #e8ac20;
+    color: #e8ac20;
+	}
+	.swal2-icon.swal2-warning::before{
+		height: 98%;
+    padding-left: 2px;
+	}
+
+
+	// 錯誤-----
+	//圈圈
+	//叉叉
+	.swal2-icon.swal2-error [class^=swal2-x-mark-line]{
+		border-radius: 0;
+	}
+
+
+	// 共用------
+	// 框架
+	.swal2-popup{
+		border-radius: 0;
+		
+	}
+	// 按鈕
+	.swal2-actions{
+		flex-wrap: nowrap;
+	}
+	// 確認按鈕
+	.swal2-styled.swal2-confirm{
+		background-color: #ffffff;
+    color: $main-theme;
+    width: 100%;
+		border: 1px solid $main-theme;
+		border-left-color: $main-theme !important;
+    border-right-color: $main-theme !important;
+    border-radius: 4px;
+    height: 35px;
+    padding: 0;
+    line-height: 35px;
+	}
+	// 取消按鈕
+	.swal2-styled.swal2-cancel{
+    color: $text-color;
+    width: 100%;
+		border: 1px solid $text-color;
+    border-radius: 0;
+    height: 35px;
+    padding: 0;
+		line-height: 35px;
+		background-color: #ffffff;
+	}
+	.swal2-actions:not(.swal2-loading) .swal2-styled:hover{
+		background-color: $main-theme;
+		color: #ffffff;
+	}
+	.swal2-styled:focus{
+		box-shadow:none;
+	}
+}
+
+.modal-open{
+	.vuestic-sidebar{
+		z-index: 95;
+	}
+}
+.modal-container{
+	.VueTables thead th{
+		//color: #323232;
+		.svg-color{
+			fill: #323232;
+		}
+		.btn-svg{
+			svg{
+				&:hover{
+					.svg-color{
+						fill: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+.modal-content-inner{
+	.ScheduleList{
+		overflow-y: initial;
+	}
+}
+
+.theme-Dark{
+	.vuestic-modal .modal-backdrop{
+		opacity: 0.8 !important;
+	}
+	.vuestic-modal .modal-content{
+		border: 1px solid $main-theme;
+	}
+}
+
+
+//ark modal
+.vuestic-modal.arkModal{
+	//monitoring
+	.map-popup-title{
+		margin: 10px 0 0;
+    text-align: center;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 10px;
+	}
+	.swiper-slide{
+		padding: 0 0px !important;
+	}
+	.map-kvm-title{
+		margin-bottom: -39px;
+	}
+	// screenshot
+	.panel_wrap{
+		img{
+			width: 100%;
+		}
+	}
+	.chart-title{
+		width: 100%;
+		text-align: right;
+		margin: 15px 0;
+		padding-right: 30px;
+		.btn-svg{
+			margin-right: 10px;
+		}
+	}
+	//kvm
+	.kvm-box{
+		margin-top: 0;
+	}
+	iframe{
+		height: 61vh !important;
+	}
+	.btn-svg + iframe{
+		height: 100% !important;
+	}
+}

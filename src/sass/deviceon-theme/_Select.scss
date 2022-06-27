@@ -1,0 +1,157 @@
+//下拉選取
+.layout{
+	.v-select{
+		border: none;
+		border-bottom: 1px solid $border-color;
+		//符號群組(X 和 下拉icon)
+		.v-select-inp-group{
+			position: relative;
+		}
+		//符號(下拉icon)
+		.v-select-btn-dd{
+			position: absolute;
+			right: 0;
+			&::before{
+				width: 10px;
+				height: 10px;
+				border: 2px solid;
+				border-top-color: transparent;
+				border-left-color: transparent;
+				transform: rotate(45deg);
+			}
+		}
+		//被選取到
+		.v-select-bar{
+			align-items: center;
+			.v-select-btn{
+				border-color:$main-theme !important;
+				color: $main-theme;
+				background:transparent !important;
+				border-radius: 24px !important;
+				padding: 1px 23px;
+				font-size: 16px;
+				font-weight: initial;
+				min-height: 32px;
+			}
+			span{
+				font-size: 17px;
+				padding-left: 10px;
+				color: $main-theme;
+			}
+		}
+		//列出的選項
+		.v-select-list{
+			a{
+				color: $text-color;
+			}
+		}
+	}
+}
+
+
+
+//單選
+.vuestic-simple-select{
+	.form-group input.has-value ~ .control-label{
+		left: -3px;
+		top: -20px;
+		font-size: 16px;
+		color: $text-color;
+		// background-color: #ff742e;
+	}
+	
+	// input has no value
+	.form-group .control-label{
+		font-size: 17px;
+	}
+
+	// if input has value
+	.form-group input.has-value{
+		// color: $main-theme !important;
+	}
+
+	// 下拉版面
+	.vuestic-scrollbar{
+		.scrollbar-wrapper{
+			max-height: 300px;
+		}
+	}
+	&.small-height{
+		.vuestic-scrollbar{
+			.scrollbar-wrapper{
+				max-height: 160px;
+			}
+		}
+	}
+}
+
+
+// 禁止點擊
+.form-group.select-form-group .dropdown-item.noclick{
+	pointer-events: none;
+	background: none;
+	color: $border-color;
+}
+
+.hasTextDanger{
+	.form-group{
+		margin-bottom: 0;
+	}
+}
+
+
+.select-over-text{
+	.vuestic-scrollbar{
+		position: absolute;
+		width: auto;
+    min-width: 100%;
+	}
+}
+
+
+.isloadingTxT{
+	text-align: center;
+	&>span{
+		font-size: 15px;
+		color: $border-color;
+		padding-bottom: 15px;
+		font-weight: initial;
+		&.drop-onloading{
+			transition: all 0.3s;
+			animation: loading 1s infinite linear;
+		}
+		&.drop-finish{
+			//color: #228f39;
+			opacity: 0.8;
+		}
+		&.drop-nodata{
+			color: $text-color;
+			opacity: 0.8;
+		}
+		&.drop-close {
+			color: $main-theme;
+			opacity: 0.8;
+			padding-left: 2rem;
+			cursor: pointer;
+		}
+	}
+}
+
+@keyframes loading {
+	0%    {opacity: 1;}
+	100%  {opacity: 0;}
+}
+
+
+
+
+.device-data-dropdown{
+	.dropdown-menu-content{
+		overflow: hidden;
+	}
+}
+
+
+.vuestic-simple-select.disable{
+	pointer-events: none;
+}

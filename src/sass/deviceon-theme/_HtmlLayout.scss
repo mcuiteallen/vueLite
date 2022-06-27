@@ -1,0 +1,723 @@
+// --------------------------------------因為物件間距都很大
+.row{
+	&-m-0{
+		margin-right: -5px;
+		margin-left: -5px;
+	}
+	&-m-1{
+		margin-right: -8px;
+		margin-left: -8px;
+	}
+	&-m-2{
+		margin-right: -22px;
+		margin-left: -22px;
+	}
+}
+
+@media (min-width: 1300px){
+	.col-xxl-1{
+		flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+	}
+	.col-xxl-2{
+		flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+	}
+	.col-xxl-3{
+		flex: 0 0 25%;
+    max-width: 25%;
+	}
+	.col-xxl-4{
+		flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+	}
+	.col-xxl-5{
+		flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+	}
+	.col-xxl-6{
+		flex: 0 0 50%;
+    max-width: 50%;
+	}
+	.col-xxl-7{
+		flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+	}
+	.col-xxl-8{
+		flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+	}
+	.col-xxl-9{
+		flex: 0 0 75%;
+    max-width: 75%;
+	}
+	.col-xxl-10{
+		flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+	}
+	.col-xxl-11{
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+	}
+	.col-xxl-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+	}
+}
+
+//--------------------------------------隱藏時機點
+.hidden-1700{
+	display: block;
+	@media (max-width: 1700px){
+		display: none;
+	}
+}
+.hidden-1600{
+	display: block;
+	@media (max-width: 1600px){
+		display: none;
+	}
+}
+.hidden-1500{
+	display: block;
+	@media (max-width: 1500px){
+		display: none;
+	}
+}
+.hidden-1400{
+	display: block;
+	@include PC-small{
+		display: none;
+	}
+}
+.hidden-1300{
+	display: block;
+	@media (max-width: 1300px){
+		display: none;
+	}
+}
+.hidden-1200{
+	display: block;
+	@include media-breakpoint-down(lg){
+		display: none;
+	}
+}
+.hidden-1100{
+	display: block;
+	@media (max-width: 1100px){
+		display: none;
+	}
+}
+.hidden-1000{
+	display: block;
+	@media (max-width: 1000px){
+		display: none;
+	}
+}
+.hidden-900{
+	display: block;
+	@media (max-width: 900px){
+		display: none;
+	}
+}
+.hidden-800{
+	display: block;
+	@media (max-width: 800px){
+		display: none;
+	}
+}
+.hidden-700{
+	display: block;
+	@media (max-width: 700px){
+		display: none;
+	}
+}
+
+
+//--------------------------------------顯示時機點
+.show-1700{
+	display: none;
+	@media (max-width: 1700px){
+		display: block;
+	}
+}
+.show-1600{
+	display: none;
+	@media (max-width: 1600px){
+		display: block;
+	}
+}
+.show-1500{
+	display: none;
+	@media (max-width: 1500px){
+		display: block;
+	}
+}
+.show-1400{
+	display: none;
+	@include PC-small{
+		display: block;
+	}
+}
+.show-1300{
+	display: none;
+	@media (max-width: 1300px){
+		display: block;
+	}
+}
+.show-1200{
+	display: none;
+	@include media-breakpoint-down(lg){
+		display: block;
+	}
+}
+.show-1100{
+	display: none;
+	@media (max-width: 1100px){
+		display: block;
+	}
+}
+.show-1000{
+	display: none;
+	@media (max-width: 1000px){
+		display: block;
+	}
+}
+.show-900{
+	display: none;
+	@media (max-width: 900px){
+		display: block;
+	}
+}
+.show-800{
+	display: none;
+	@media (max-width: 800px){
+		display: block;
+	}
+}
+.show-700{
+	display: none;
+	@media (max-width: 700px){
+		display: block;
+	}
+}
+
+// ----------------- 混合版
+.hidden{
+	display: none;
+}
+.none{
+	display: none !important;
+}
+
+.phone-hidden{
+	display: block;
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
+}
+
+.phone-show{
+	display: none;
+	@include media-breakpoint-down(sm){
+		display: block;
+	}
+}
+
+
+// --------------------------------------距離
+.mb-one{
+	margin-bottom: 10px;
+}
+.mb-two{
+	margin-bottom: 20px;
+}
+.mb-three{
+	margin-bottom: 30px;
+}
+
+.note-m{
+	margin: 5px 10px 0;
+}
+.mt-40{
+	margin-top: -40px !important;
+	margin-right: 10px;
+}
+
+
+
+//--------------------------------------排版
+.box-flex__Jcenter{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.box-flex-Acenter{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 100%;
+}
+.box-flex__Acenter-Jbetween{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+// ----------------- 物件版面
+.box-H350-overScroll{
+	max-height: 350px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.box-iframe{
+	width: 100%;
+	height: calc(100vh - 112px);
+}
+
+.box-full-W {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.box-current{
+	padding: 10px 15px 0;
+}
+
+.box-nofilter{
+	padding-top: 60px;
+}
+
+
+
+// ----------------- 寬度
+.w40px{
+	width:40px !important;
+}
+.w100px{
+	width:100px;
+	display: inline-block;
+}
+.w130px{
+	width:130px;
+	display: inline-block;
+}
+.w110px{
+	width:110px;
+}
+.w200px{
+	margin-bottom: 0px;
+  width: 220px;
+}
+.w32px{
+	width: 32px !important;
+	height: 32px;
+}
+.w70px{
+	width:70px !important;
+}
+
+
+// ----------------- 高度
+.lineHight30{
+	line-height: 30px;
+}
+
+
+// ----------------- 透明度
+.opacity-4{
+	opacity: 0.4;
+}
+.opacity-5{
+	opacity: 0.5;
+}
+
+
+// ----------------- 其他
+.z-index-99{
+	position: absolute;
+	z-index: 99;
+}
+
+
+
+.cursor-pointer{
+	cursor: pointer;
+}
+
+.pointer-event-none{
+	pointer-events: none;
+}
+
+label{
+	white-space:nowrap;
+	@include PC-small{
+		font-size: 14px;
+		margin-bottom: 0px;
+	}
+}
+
+.bg-white{
+	background: $dashbordcontent-bg;
+}
+
+.bb{
+	border-bottom: 1px solid $border-color; 
+}
+.bb-ee{
+	border-bottom: 1px solid #eeeeee; 
+}
+.border{
+	border: 1px solid $border-color;
+}
+
+
+//--------------------------------------每區塊的空間
+.box-content{
+	width: 100%;
+	padding: 0px 30px;
+	&.box-no-bottom{
+		padding-bottom: 0;
+		padding-top: 0px;
+		@include media-breakpoint-down(sm){
+			padding-top: 0px;
+			padding-bottom: 10px;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		padding: 0px 15px 15px;
+	}
+}
+
+
+
+
+
+//--------------------------------------內頁的版面
+.box-tool-nav{
+	height: 60px;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	transition: all 0.3s;
+	&.no-filter{
+		padding: 10px 20px;
+		@include media-breakpoint-down(sm){
+			padding: 0px 10px;
+		}
+	}
+	&.account-tool-nav{
+		.btn-primary:not(:last-child){
+			margin-right: 12px;
+		}
+		@media (max-width:900px){
+			height: auto;
+		}
+	}
+	&.box-tool-nav-PRL{
+		padding: 10px 30px;
+		@include media-breakpoint-down(sm){
+			padding: 0px 15px;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		height: auto;
+		padding: 0;
+		// 底下兩邊的工具列
+		.d-flex{
+			margin: 0px 0;
+		}
+	}
+	.total-text {
+		margin-right: 1rem;
+    font-size: 16px;
+    padding-top: 10px;
+	}
+}
+
+// fixed box
+.title-category.hidden + .box-content{
+	.total-text{
+		margin-right: 4rem;
+	}
+}
+
+
+//定住
+.box-fix{
+	width: 100%;
+	position: sticky;
+	top: 55px;
+	right: 0;
+	z-index: 95;
+	margin-bottom: 55px;
+	transition: all 0.3s;
+}
+
+
+// 在每頁的filter的下拉
+.box-fix{
+	.vuestic-widget-body-inner{
+		padding: 17px 15px 0px;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+	.item-list{
+		margin-bottom: 15px;
+	}
+	.item-title{
+		margin-bottom: 0;
+	}
+	.vuestic-widget-body{
+		-webkit-user-select: none;
+		user-select: none;
+	}
+	.vuestic-simple-select input.has-value{
+		-webkit-user-select: none;
+		user-select: none;
+	}
+}
+
+//往上滾動時，縮小高度
+.title-category.hidden{
+	&+.box-no-bottom{
+		padding-top: 20px;
+		.vuestic-widget.info-widget{
+			margin-bottom: 5px;
+			.vuestic-widget-header{
+				padding: 6px 15px;
+			}
+			.vuestic-widget-body-inner{
+				padding: 8px 15px 0px;
+			}
+			.item-list{
+				margin-bottom: 7px;
+			}
+			.item-title{
+				font-size: 14px;
+			}
+		}
+		.select-form-group{
+			margin-bottom: 10px;
+		}
+		.vuestic-simple-select__dropdown-toggle{
+			input{
+				background: #ffffff;
+			}
+		}
+		// 工具列
+		.box-tool-nav{
+			height: 50px;
+			padding: 0px 0;
+			@media (max-width:767.98px) {
+				height: auto;
+			}
+		}
+	}
+	&+.box-content{
+		padding-top: 20px;
+		padding-bottom: 10px;
+		background: #f2f2f2;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		input{
+			background: $dashbordcontent-bg;
+			&:focus{
+				background: #ffffff;
+				border: 1px solid $main-theme-light;
+			}
+		}
+		@include media-breakpoint-down(sm){
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	}
+	&+.box-tool-nav{
+		padding-top: 15px;
+		padding-bottom: 10px;
+		background: #f2f2f2;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		@include media-breakpoint-down(xs){
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	}
+	&+.box-no-bottom, &+.box-content{
+		.toggle-Filter-icon{
+			margin-top: -30px !important;
+			z-index: 9;
+			background-color: $main-theme;
+			padding-top: 5px !important;
+			border-radius: 0 !important;
+			@include media-breakpoint-down(sm){
+				margin-top: 14px !important;
+			}
+		}
+		.vuestic-widget-header{
+			&.border-theme{
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+.theme-Dark{
+	.title-category.hidden{
+		&+.box-no-bottom{
+			.vuestic-simple-select__dropdown-toggle{
+				input{
+					background: $dashbordcontent-bg;
+				}
+			}
+			.toggle-Filter-icon{
+				background: $dashbordcontent-bg;
+			}
+		}
+		&+.box-content{
+			background: $dashbordcontent-bg;
+			input{
+				background: $dashbordcontent-bg;
+				&:focus{
+					background: $dashbordcontent-bg;
+				}
+			}
+		}
+	}
+}
+
+
+.Navsub-List{
+	padding: 15px 25px 0px;
+	transition: all 0.3s;
+	@include media-breakpoint-down(sm) {
+		padding: 15px 15px 0px;
+	}
+	&.small-height{
+		padding: 8px 20px 0px;
+		a{
+			margin-bottom: 10px;
+		}
+	}
+	&.inner{
+		padding: 0px;
+		a{
+			min-width: 100px;
+			margin-bottom: 0px;
+			background-color: transparent;
+		}
+		@include media-breakpoint-down(sm){
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			a{
+				margin-right: 0;
+			}
+		}
+	}
+	a{
+		min-width: 140px;
+    padding: 0 15px;
+    height: 32px;
+    line-height: 30px;
+		font-size: 16px;
+		text-align: center;
+		margin-right: 15px;
+		margin-bottom: 15px;
+		display: inline-block;
+		letter-spacing: 0.5px;
+		background: transparent;
+		border-radius: 4px;
+    border: 1px solid $main-theme;
+    color: $main-theme !important;
+		transition: all 0.3s;
+		&:hover, &.focus{
+			color: #ffffff !important;
+			background-color: $main-theme;
+		}
+		@include media-breakpoint-down(sm){
+			margin-right: 10px;
+			padding: 0 10px;
+			font-size: 14px;
+		}
+	}
+}
+
+.box-top{
+	border-bottom: 1px solid $border-color;
+	width: 100%;
+}
+
+
+
+
+//modal  change big
+.modal-dialog.changeBig{
+	margin-top: 0 !important;
+	max-width: 100%;
+	.modal-body{
+		&.modal-nofooter{
+			max-height: 100vh !important;
+		}
+	}
+	
+	img{
+		width: 100%;
+	}
+	.modal-header, .modal-footer{
+		display: none;
+	}
+	//下拉區塊
+	.row.InnerSelect{
+		display: none;
+	}
+	//縮小按鈕
+	.tool-zoomout{
+		position: absolute;
+		right: 14px;
+    top: 10px;
+	}
+	.panel_wrap{
+		height: 100vh !important;
+	}
+	.modal-body.nofooter{
+		max-height: 100vh;
+	}
+}
+
+
+.modal{
+	.vuestic-widget.info-widget{
+		border-radius: 0px;
+    overflow: initial;
+	}
+	.vuestic-collapse{
+		border-radius: 0px;
+    overflow: initial;
+	}
+}
+
+.popover{
+
+	i{
+		display: none;
+	}
+}
+.popover.open{
+	i{
+		display: block;
+	}
+}
+
+
+.modal{
+	.VueTables__table{
+		.w-100.text-right{
+			padding-right: 10px;
+		}
+	}
+}
+

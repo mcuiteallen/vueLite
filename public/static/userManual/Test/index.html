@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>User Manual - E2I I.APP Server | EIS</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="Note of User Manual">
+    <link rel="preload" href="./assets/css/0.styles.c9e789d6.css" as="style"><link rel="preload" href="./assets/js/app.b321adfd.js" as="script"><link rel="preload" href="./assets/js/2.c400e3b7.js" as="script"><link rel="preload" href="./assets/js/4.57c05bdc.js" as="script"><link rel="prefetch" href="./assets/js/3.6e7412d9.js"><link rel="prefetch" href="./assets/js/5.2ec9846b.js"><link rel="prefetch" href="./assets/js/6.69a159d7.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.c9e789d6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>User Manual - E2I I.APP Server</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="./#installer" class="sidebar-link">Installer</a><ul class="sidebar-sub-headers"></ul></li><li><a href="./#dashboard" class="sidebar-link">Dashboard</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="./#description" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="./#dashboard-setting" class="sidebar-link">Dashboard Setting</a></li><li class="sidebar-sub-header"><a href="./#borad-type" class="sidebar-link">Borad Type</a></li></ul></li><li><a href="./#eis" class="sidebar-link">EIS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="./#description-2" class="sidebar-link">Description</a></li><li class="sidebar-sub-header"><a href="./#device-list" class="sidebar-link">-Device List</a></li><li class="sidebar-sub-header"><a href="./#device-monitoring" class="sidebar-link">-Device Monitoring</a></li><li class="sidebar-sub-header"><a href="./#remote-control" class="sidebar-link">-Remote Control</a></li></ul></li><li><a href="./#plugin" class="sidebar-link">Plugin</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="./#plugin-list" class="sidebar-link">-Plugin List</a></li><li class="sidebar-sub-header"><a href="./#plugin-config" class="sidebar-link">-Plugin Config</a></li></ul></li><li><a href="./#events" class="sidebar-link">Events</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="./#event-log" class="sidebar-link">-Event Log</a></li><li class="sidebar-sub-header"><a href="./#event-alert" class="sidebar-link">-Event Alert</a></li><li class="sidebar-sub-header"><a href="./#notification" class="sidebar-link">-Notification</a></li><li class="sidebar-sub-header"><a href="./#assign-action" class="sidebar-link">-Assign Action</a></li><li class="sidebar-sub-header"><a href="./#ruleengine" class="sidebar-link">-RuleEngine</a></li></ul></li><li><a href="./#settings" class="sidebar-link">Settings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="./#provision" class="sidebar-link">Provision</a></li><li class="sidebar-sub-header"><a href="./#account" class="sidebar-link">Account</a></li><li class="sidebar-sub-header"><a href="./#ota-remote-provisioning" class="sidebar-link">OTA(Remote Provisioning)</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="e2i-i-app-server"><a href="#e2i-i-app-server" class="header-anchor">#</a> E2I I.APP Server</h1> <p>With E2I_Server, users can swiftly utilize onboard devices, efficiently monitor device health status.</p> <p>*Main function and feature of E2I I.APP product - by PM</p> <h2 id="installer"><a href="#installer" class="header-anchor">#</a> Installer</h2> <p>Run E2I_Server installer step by step:</p> <p>Step 1.</p> <p><img src="https://i.imgur.com/X2O5aLO.png" alt=""></p> <p>Step 2.
+Select Installation Folder</p> <p><img src="https://i.imgur.com/pAUvzL9.png" alt=""></p> <p>Step 3.
+Assign Public IP or DomainName for this E2I Server.
+<img src="https://i.imgur.com/dWWJ9PK.png" alt=""></p> <p>Enter “Public IP” or “Domain Name” for this physical/virtual machine and click “Next”. This information is required for “Edge Device” connectivity, please make sure your device is reachable under this IP or Domain Name.</p> <p>For example, enter DomainName</p> <p><img src="https://i.imgur.com/v35Mdly.png" alt=""></p> <p>Step 4.
+Assign HTTP Port Number you want.</p> <p><img src="https://i.imgur.com/1tWM7yW.png" alt=""></p> <p>You will need to configure the HTTP port number that is used for web browser-based access the DeviceOn management portal. The default port is 8080, but you can select any other port as long as it does not conflict with any other application or service.</p> <p>Step 5.
+Assign password for PostgreSQL Server.
+<img src="https://i.imgur.com/SB8vbv6.png" alt=""></p> <p>Configure the password of the relational database (PostgreSQL) that E2I_Server uses to manage account, device, permission, and relation data. The default account name is “postgres” and the password should follow below guideline.</p> <p>Strong Password Rules:</p> <ul><li>Minimum eight characters, at least one number, one lowercase letter, one uppercase letter, and one special character (Blank character, Backslash(), Double quotes(&quot;) are prohibited)</li></ul> <p>Step 6.
+Assign password for MongoDB Server.
+<img src="https://i.imgur.com/UEMspit.png" alt=""></p> <p>Configure the password of the NoSQL database (MongoDB) that stores device sensor data. The default account and database is “wisepaas/WISE-PaaS”. This password should also follow strong password rules as outlined above.</p> <p>Step 7.
+Assign Maximum cache size for MongoDB Server
+<img src="https://i.imgur.com/frJUsaj.png" alt=""></p> <p>Select the database installation path and cache size of MongoDB and click “Next”. A larger cache size will result in better performance.</p> <p>Step 8.
+Assign password for administrator
+<img src="https://i.imgur.com/4mFBaw4.png" alt=""></p> <p>Configure the password of the root account (dummy name “root@advantech.com.tw”) and click “Next”. This root account has the highest permission level and is used to log in to the E2I_Server web service and create other user accounts.</p> <p>Step 9.
+Assign Grafana Port Number.
+<img src="https://i.imgur.com/UTNJlk4.png" alt=""></p> <p>Set up the HTTP service port for Grafana dashboard. The default user name and password is admin/admin. You will be able to modify this at the first login.</p> <h2 id="dashboard"><a href="#dashboard" class="header-anchor">#</a> Dashboard</h2> <h3 id="description"><a href="#description" class="header-anchor">#</a> Description</h3> <p>You can create a new board by yourself.
+<img src="./assets/img/dashboard.4067afbb.png" alt=""></p> <h3 id="dashboard-setting"><a href="#dashboard-setting" class="header-anchor">#</a> Dashboard Setting</h3> <p>Click on the icon to add “Dashboard”.
+<img src="https://i.imgur.com/x3EL9ex.png" alt=""></p> <h3 id="borad-type"><a href="#borad-type" class="header-anchor">#</a> Borad Type</h3> <ul><li><p><strong>Device</strong>
+step 1 Choose “Device”
+<img src="https://i.imgur.com/uifdV2q.png" alt="">
+step 2 Enter your Infomation, Url, Account and Password(Grafana)
+<img src="https://i.imgur.com/9AgzlIM.png" alt="">
+step 3 select the device and target sensor
+<img src="https://i.imgur.com/vyfXlvj.png" alt="">
+step 4 confirm your setting
+<img src="https://i.imgur.com/BxJshoe.png" alt=""></p></li> <li><p><strong>Device Group</strong>
+step 1 Choose “Device Group”
+<img src="https://i.imgur.com/9IckHIu.png" alt="">
+step 2 Enter your Infomation, Url, Account and Password(Grafana)
+<img src="https://i.imgur.com/9AgzlIM.png" alt="">
+step 3 select the group and target sensor
+<img src="https://i.imgur.com/Glf3uWZ.png" alt="">
+step 4 confirm your setting
+<img src="https://i.imgur.com/0GJFYMT.png" alt=""></p></li> <li><p><strong>Sample Template</strong>
+step 1 Choose “Sample Template”
+<img src="https://i.imgur.com/bqhZUtS.png" alt="">
+step 2 Enter your Infomation, Url, Account and Password(Grafana)
+<img src="https://i.imgur.com/9AgzlIM.png" alt="">
+step 3 select the template
+<img src="https://i.imgur.com/4USaLa1.png" alt="">
+step 4 confirm your setting
+<img src="https://i.imgur.com/QfPMyxU.png" alt=""></p></li> <li><p><strong>Customize Url</strong>]
+step 1 Choose “Customize Url”
+<img src="https://i.imgur.com/x0DUABC.png" alt="">
+step 2 Enter your Board Name,
+<img src="https://i.imgur.com/Pbk35Kv.png" alt="">
+step 3 Enter your Customize Url
+<img src="https://i.imgur.com/SR1JWEM.png" alt=""></p></li></ul> <p>After setting
+<img src="https://i.imgur.com/843dNAR.png" alt=""></p> <h2 id="eis"><a href="#eis" class="header-anchor">#</a> EIS</h2> <h3 id="description-2"><a href="#description-2" class="header-anchor">#</a> Description</h3> <p>After your device onboarding, you could view, edit device basic information, remote control, retrieve sensor data on your devices. Four tabs under <strong>Device</strong> menu, <strong>Device List</strong> contain device name, upgrade status, power management and etc. <strong>Device Monitoring</strong> to give device loading at present. To remote diagnostic and debug through <strong>Remote Control</strong>.
+<img src="https://i.imgur.com/w86hQC1.png" alt=""></p> <h3 id="device-list"><a href="#device-list" class="header-anchor">#</a> -Device List</h3> <p>The device could be assigned to multiple accounts and device groups; therefore, you could leverage filter to find your device through <strong>Account</strong>, <strong>Device Group</strong> or <strong>Keyword</strong>.
+<img src="https://i.imgur.com/EhH5xfc.png" alt=""></p> <p>Here is action bar for add, edit, search or export for below table devices.
+<img src="https://i.imgur.com/JAkFc2g.png" alt=""></p> <p>Click the icon to add devices, that’s similar to device onboarding, download WISE-Agent, setup to your local device and grouping.
+<img src="https://i.imgur.com/WHKZXrC.png" alt=""> <img src="https://i.imgur.com/Krsii1p.png" alt=""></p> <p>Click the edit icon to display <strong>“Delete”</strong> and <strong>“Edit”</strong> options on each device list.
+<img src="https://i.imgur.com/cZjUB3X.png" alt=""></p> <p>You could edit device name, assign to different accounts, device groups in <strong>“Edit Device”</strong> <img src="https://i.imgur.com/0Ho1yNm.png" alt=""></p> <p>If you would like to know a device be assigned to which account and device group, click search icon to enter Agent ID (from your WISE-Agent UI) to understand.
+<img src="https://i.imgur.com/jSEh9B1.png" alt=""> <img src="https://i.imgur.com/H4Nn2H6.png" alt=""></p> <p>Click on export icon to export devices that in the table as CSV file.
+<img src="https://i.imgur.com/zlzVhaw.png" alt=""> <img src="https://i.imgur.com/fGt9BKz.png" alt=""></p> <p>Actually, you cloud do lots of remote action on the device.<img src="https://i.imgur.com/4vzX6YY.png" alt=""></p> <ul><li><strong>Device Status:</strong> Green light represent device connected, gray for disconnected and orange for device abnormal, due to device over threshold.</li> <li><strong>Device Name:</strong> Device name, click name to get more deice information, such as platform, operation system, MAC, memory, etc.
+<img src="https://i.imgur.com/qdWseqF.png" alt=""></li> <li><strong>Upgrade:</strong> WISE-Agent upgrade icon, if there is new version released by Advantech, it will check and show the icon automatically.</li> <li><strong>Power:</strong> Power On/Off, Restart, Sleep and hibernate, the actions depend on your device supported.</li> <li><strong>Protection:</strong> Power-by McAfee white-list protection mechanism to solidify device system. After enable, 3rd execution file, bat, DLL cannot be launch. Please go to Setting -&gt; Provision-&gt; Protection to install first.</li> <li><strong>Backup &amp; Recovery:</strong> Power-by Acronis to backup/recovery device runtime system partition. Please go to Setting -&gt; Provision-&gt; Backup/Recovery to install first.</li> <li><strong>Device Group Name:</strong> Device belong to which device groups.</li> <li><strong>Wake-On-LAN:</strong> Wake-On-LAN mode for device, three mode to power your device up, “Direct Mode”, “Agent Mode” and “Repeater Mode”. The magic package sent by EIS-Cloud Server call “Direct Mode”, but cannot through different network. Therefore, to overcome this limitation, through another Agent or Router to send, forward magic packet. Please go to Setting -&gt; Provision-&gt; Power On to configure.</li> <li><strong>Message:</strong> Device current status</li></ul> <h3 id="device-monitoring"><a href="#device-monitoring" class="header-anchor">#</a> -Device Monitoring</h3> <p>On this page, you could get real-time information about the device that you selected. The information includes general PC status, such as network speed, software process, disk healthy, CPU and memory usage. If the device is Advantech industrial PC and SUSI driver supported, the RPM (Revolution(s) Per Minute) of CPU FAN, system, board level voltage, temperature is displayed on the page.
+<img src="https://i.imgur.com/lzuYhCR.png" alt="">
+Some of devices support multiple network cards, especial industrial PC. Click on the network button to retrieve others.
+<img src="https://i.imgur.com/UD2eGd3.png" alt=""> <img src="https://i.imgur.com/xx55Ppn.png" alt=""></p> <ul><li><strong>Name:</strong> Name of network card</li> <li><strong>Description:</strong> network description</li> <li><strong>State:</strong> Network connected or disconnected, for example, ethernet cable plugin or not.
+<img src="https://i.imgur.com/W2OwAsq.png" alt=""></li> <li><strong>Link Speed (MBPS):</strong> Network maximum link speed![](https://i.imgur.c<img src="https://i.imgur.com/BAZc9pb.png" alt="">
+om/gkp6lXi.png)</li> <li><strong>Usage:</strong> Network current usage, Speed/Link Speed.</li> <li><strong>Speed (MBPS):</strong> Send plus receive data rate.
+Click on Software Process to show current user process list, if your device system not login, the result might be zero.
+<img src="https://i.imgur.com/61t3nMK.png" alt="">
+Hover your mouse on the process list, you could restart or terminal it.
+<img src="https://i.imgur.com/NaLMiD9.png" alt="">
+For hard drive status, not only include current Used Storage, but Healthy and Power on Time. The healthy is based on Acronis healthy model, that calculate on edge side, if you are interested, reference the official page.
+For hard drive status, not only include current Used Storage, but Healthy and Power on Time. The healthy is based on Acronis healthy model, that calculate on edge side, if you are interested, reference the official page.
+<img src="https://i.imgur.com/KopzcFk.png" alt=""></li></ul> <h3 id="remote-control"><a href="#remote-control" class="header-anchor">#</a> -Remote Control</h3> <p>If you need to debug, diagnostic to your devices, actually, do not need go to field side. Through EIS-Cloud remote control to manage to reduce your operation effort. Basically, there are three functions (<strong>Screenshot</strong>, <strong>Terminal</strong> and <strong>Remote Desktop</strong>) for most devices.
+<img src="https://i.imgur.com/ib0Fc4n.png" alt=""> <strong>[Screenshot]</strong>
+Through the Screenshot to get device real-time screen, there is a limitation, your device must login to operation system, otherwise, cannot capture screen and shown “No Login”
+<img src="https://i.imgur.com/2fflD93.png" alt=""> <strong>[Terminal]</strong>
+To terminal support any command to your devices, for instance, realize your device IP, traceroute the network or copy/view file on the device.
+<img src="https://i.imgur.com/8aWF2Lc.png" alt=""> <strong>[Remote Desktop]</strong>
+EIS-Cloud leverage VNC (Virtual Network Computing) technology to achieve remote desktop, to bridge different network between public and private. User do not need to install any program, App on their laptop or mobile devices. Through EIS-Cloud website to remote desktop to debug and diagnostic.
+<img src="https://i.imgur.com/Rtln28z.png" alt=""></p> <h2 id="plugin"><a href="#plugin" class="header-anchor">#</a> Plugin</h2> <p>You could get real-time and historical data ,adjust data report interval or reset to default (60s) for basic sensors. And you could  Config your plugin if it support the function of self-web.
+<img src="https://i.imgur.com/bRWX5lC.png" alt=""></p> <h3 id="plugin-list"><a href="#plugin-list" class="header-anchor">#</a> -Plugin List</h3> <p>Raw data of each plugin on devices, user could get real-time and historical data on this page. To data analysis and aggregation, user could adjust data report interval or reset to default (60s) for basic sensors.
+<img src="https://i.imgur.com/cXdCs3t.png" alt=""></p> <h3 id="plugin-config"><a href="#plugin-config" class="header-anchor">#</a> -Plugin Config</h3> <p><img src="https://i.imgur.com/pgwHvIZ.png" alt=""></p> <h2 id="events"><a href="#events" class="header-anchor">#</a> Events</h2> <p>Include real-time “Action”, “Event Alert”, “Rule Engine”, “Notification” services. These setting are usually changed less often or only need to be modified once. Some functions require root, admin to modify or be visible, and product activation only shown on prefecture license, such as Standalone, Azure Kubernetes version.
+<img src="https://i.imgur.com/tNcm1jC.png" alt=""></p> <h3 id="event-log"><a href="#event-log" class="header-anchor">#</a> -Event Log</h3> <p>Device management is complex with device log and user behaver. Logging data can provide insights about your devices and help you:</p> <ul><li>Troubleshoot past problems or prevent potential ones</li> <li>Improve device healthy or maintainability</li> <li>Real-time alert through 3rd notification</li></ul> <p>EIS-Cloud logs are categorized into the following types:</p> <ul><li><strong>Operation log</strong> provide information about EIS-Cloud resource CREATE, UPDATE and DELETE operation, like set device power off, update device name or delete account.</li> <li><strong>Device log</strong> provide information about events raised as device side resources, like connected, disconnected, over the threshold,</li> <li><strong>System log</strong> provide information about analyzed; scheduling event/alert that have been process on EIS-Cloud server. Example of this type are queue buffer alerts where server has processed and measured IoTHub queue and provides concise alerts.</li></ul> <p>There are three type of Event Logs as mentioned above and each event log with different severity, Information, Warning and Error. Through the filter to find your device log.</p> <p><img src="https://i.imgur.com/JMBclt8.png" alt="">
+Click on the icon to refresh event log by manual.
+<img src="https://i.imgur.com/HAidFSs.png" alt="">
+Click on export icon to export devices that in the table as CSV file.
+<img src="https://i.imgur.com/iTzgbld.png" alt=""></p> <h3 id="event-alert"><a href="#event-alert" class="header-anchor">#</a> -Event Alert</h3> <p>EIS provide Event Log that describe on Section 3.3.4, user could decide to what kind of event should be notified.
+<img src="https://i.imgur.com/Smljxlw.png" alt=""></p> <h3 id="notification"><a href="#notification" class="header-anchor">#</a> -Notification</h3> <p>Here are five notification services, include tradition service (SMS, Email) and popular social media Purchase Information &amp; Product Page 95(LINE, WeChat and WhatsApp), if you select the event type on “Event Alert”, the notify message will through these services. These notification services are global setting, if your account does not receive, please check the personal setting on Account -&gt; Personal Alert Service.
+<img src="https://i.imgur.com/nGVWQh4.png" alt=""></p> <h3 id="assign-action"><a href="#assign-action" class="header-anchor">#</a> -Assign Action</h3> <p>The real-time actions on the overview that are defined, created on here, you could add a new action and pin to overview. These actions are binding to personal account, cannot view, edit, delete others.
+<img src="https://i.imgur.com/arxj68y.png" alt="">
+Click on the icon to add action.
+<img src="https://i.imgur.com/KP8hcEX.png" alt="">
+Enter your description and select an “Action” from three categories, Power Saving, Security and System.
+<img src="https://i.imgur.com/asZcFyZ.png" alt="">
+Select “Device Groups” for the action that you picked up.
+<img src="https://i.imgur.com/C5kmtBA.png" alt="">
+To confirm information, action, group and devices, and enable pin on overview, please click on “Confirm” to complete the wizard.
+<img src="https://i.imgur.com/bj8Lepw.png" alt="">
+After created, you could find a new action on below actions list, click the PIN icon to determine the action shown on overview or not.
+<img src="https://i.imgur.com/LtoFnE9.png" alt="">
+The actions support scheduling, click on the icon to define a schedule, daily, weekly, monthly, yearly or once.
+<img src="https://i.imgur.com/fu80sUd.png" alt="">
+Enter to schedule list for all actions, and click on add icon to create new schedule.
+<img src="https://i.imgur.com/ybADKVF.png" alt=""></p> <p>Given your schedule name, time zone, period and time and click Save.</p> <ul><li><strong>Schedule Name:</strong> Name of schedule</li> <li><strong>Time Zone:</strong> Time zones tend to follow the boundaries of countries and their subdivisions instead of longitude, because it is convenient for areas in close commercial or other communication to keep the same time.</li> <li><strong>Period:</strong> Repeat interval for Daily, Weekly, Monthly, Yearly or once at a time.</li> <li><strong>Time:</strong> Execution time.
+<img src="https://i.imgur.com/UihZSyR.png" alt="">
+Click on the edit icon to adjust schedule item.
+<img src="https://i.imgur.com/7QSJ6z9.png" alt=""></li></ul> <h3 id="ruleengine"><a href="#ruleengine" class="header-anchor">#</a> -RuleEngine</h3> <p>EIS provides the rule engine. Users can acquire anomaly situations by means of setting thresholds to those interested devices, and, once one or more thresholds meets, receive alerts via event notification services, another one indispensable feature for users.
+<img src="https://i.imgur.com/Sncxfl4.png" alt="">
+Click on the add icon to create a Rule.
+<img src="https://i.imgur.com/qjx2WsT.png" alt="">
+Pick-up the sensor that you want to monitor, the steps are select Rule Type, Device Group and Device.
+<img src="https://i.imgur.com/FYlkhOy.png" alt=""> <img src="https://i.imgur.com/P0UbDpp.png" alt="">
+Define the threshold, provide 3 types, more than, less than and outside the range. Also, you could realize current value on the page.</p> <ul><li><strong>Lasting Time (Second):</strong> means the sensor over the threshold and continue for a period time, avoid peak value to trigger.</li> <li><strong>Notice Interval (Second):</strong> If over the threshold, the WISE-Agent will send a notify event, to avoid lots of message, user could adjust notice interval.
+<img src="https://i.imgur.com/24c7GhF.png" alt="">
+Next, to define the action, if threshold reached. For example, you could power your device off, if the hard drive unhealthy.
+<img src="https://i.imgur.com/Vl3JWEP.png" alt="">
+Confirm the rule setting and click confirm.
+<img src="https://i.imgur.com/31HdxIO.png" alt="">
+The rule list shown as below, user could edit or disable through the switch.
+<img src="https://i.imgur.com/oqmsxBt.png" alt=""></li></ul> <h2 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h2> <h3 id="provision"><a href="#provision" class="header-anchor">#</a> Provision</h3> <p>For device provision, 3 types need be pre-configured. One is “Power On”, select which mode to enable device wake up. The others are 3rd party tool integration, Acronis to backup/recovery your device system and McAfee for white-list security protection. To install 3rd tools, you must purchase the license and activate the product.
+<img src="https://i.imgur.com/qHvNxZN.png" alt="">
+Click on the Setting for “Power On”.
+<img src="https://i.imgur.com/EByV77Y.png" alt="">
+To power your device up, you might to configure the mode for your device. The mechanism is based on Wake-on-LAN to send magic packet to your device. There is a limitation on “Direct Mode”, the EIS-Cloud server and edge device must be on the same network.
+<img src="https://i.imgur.com/NI868Tv.png" alt="">
+However, through the “Agent Mode” or “Repeater” could overcome the limitation. You need to pick-up a device that always on and on the same network with other devices.
+<img src="https://i.imgur.com/nhjm3UN.png" alt="">
+For Repeater mode, not only enter your repeater IP, but set your repeater to allow port forwarding (uses UDP port 7 and 9) and permit the packet to be broadcast to the entire LAN.
+<img src="https://i.imgur.com/lIERzHj.png" alt="">
+Click on the Install for “Acronis”.
+<img src="https://i.imgur.com/17fPSwm.png" alt="">
+Select the free space size to create Acronis Secure Zone (Hidden Partition) to backup system partition. The free space size must larger than system used.
+<img src="https://i.imgur.com/XKSilxX.png" alt=""></p> <p>Click on the Install for “McAfee”, and select device group to install.
+<img src="https://i.imgur.com/aHxQA5B.png" alt=""> <img src="https://i.imgur.com/q3IwXXy.png" alt=""></p> <h3 id="account"><a href="#account" class="header-anchor">#</a> Account</h3> <p>The first step to manage device is login to EIS-Cloud, therefore, you could start to invite, edit other accounts on this page. There are 3 tabs on account management.
+<img src="https://i.imgur.com/oWfFSrk.png" alt=""></p> <p>⚫ My Profile
+On “My Profile”, shows your account information and personal alert service, such as LINE, WeChat token.
+⚫ Management
+Every account belongs to a role, you could use the filter to find account. There are 3 roles in the EIS-Cloud system. One is “Super Admin”, only one account in the system belongs to “Super Admin”. The other role is “Admin” and “Device Admin”.
+<img src="https://i.imgur.com/N0GMrfk.png" alt="">
+Click on the icon to “Add Account”
+<img src="https://i.imgur.com/yy6hxo8.png" alt=""> <img src="https://i.imgur.com/ktAVPC6.png" alt="">
+Enter your account, role, password, etc. to create an account. If the user would to receive notify from device, system alert, please enable these alert services on “Mail”, “SMS”, “WeChat”, “LINE” and WhatsApp. These alert services are personal setting, please make sure the “Setting -&gt; Notification” is configured, enabled on EIS-Cloud System.
+Click on the icon to “Edit” or “Disable” account.
+<img src="https://i.imgur.com/3uFQsQE.png" alt="">
+⚫ Device Group
+Every account could group their device into different groups to manage, for example, device over different floor on the building. User could create 1F, 2F group to easy management.
+<img src="https://i.imgur.com/HUZEs8d.png" alt="">
+Click on the icon to add “Device Group”.
+<img src="https://i.imgur.com/SP7yDFS.png" alt=""> <img src="https://i.imgur.com/vGkeHRQ.png" alt=""></p> <h3 id="ota-remote-provisioning"><a href="#ota-remote-provisioning" class="header-anchor">#</a> OTA(Remote Provisioning)</h3> <p>OTA (Over-The-Air) is one of powerful feature EIS-Cloud provides. Users can deploy software packages, configuration, Windows QFE (Quick Fix Engineering), Advantech BIOS update onto a device remotely, or even many devices broadly.</p> <p>https://drive.google.com/file/d/1so5GInp0FHwFXaeUf1uZE8olj18ptiXv/view?usp=sharing</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="./assets/js/app.b321adfd.js" defer></script><script src="./assets/js/2.c400e3b7.js" defer></script><script src="./assets/js/4.57c05bdc.js" defer></script>
+  </body>
+</html>

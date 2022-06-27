@@ -1,0 +1,136 @@
+// -------------------------------tree
+// 框架
+.div_treeviewlist {
+	border: 1px solid transparent !important;
+	padding: 0px !important;
+	background: $dashbordcontent-bg !important;
+}
+.sustomization-tree.tree{
+	padding: 10px 27px;
+	.tree-content{
+		border-bottom: 1px solid #aaaaaa;
+		padding: 10px 0;
+		@include PC-small{
+			padding: 6px 0;
+		}
+	}
+	// 大項目的被選到
+	.tree-node.selected>.tree-content{
+		background-color: $main-theme-light-2;
+	}
+	.tree-anchor{
+		color: $text-color;
+	}
+	.tree-node.selected>.tree-content>.tree-anchor{
+		span{
+			color: $main-theme;
+		}
+	}
+	// 大項目的hover
+	.tree-node:not(.selected)>.tree-content:hover {
+    background: $main-theme-light-2;
+	}
+
+	// 大項目 + - 的部分， 原本是箭頭
+	.tree-arrow{
+		width: 16px;
+		margin-left: 10px;
+	}
+	.tree-arrow.has-child{
+		height: 16px;
+		background: $main-theme;
+		margin-right: 18px;
+		// -
+		&::after{
+			border: none;
+			transform: none;
+			transition: none;
+			left: 3px;
+			top: 7px;
+			height: 2px;
+			width: 10px;
+			background: #ffffff;
+		}
+		&::before{
+			content:'';
+			position: absolute;
+			background: #ffffff;
+			height: 10px;
+			width: 2px;
+			top: 3px;
+			left: 7px;
+			opacity: 0;
+		}
+		//打開了
+		&.expanded{
+			&::before{
+				opacity: 1;
+			}
+		}
+	}
+
+	// 子項目的
+	.tree-children{
+		.tree-content{
+			padding-left: 35px !important;
+		}
+		.tree-arrow{
+			display: none;
+		}
+	}
+
+	// checkbox
+	.tree-checkbox{
+		width: 16px;
+		height: 16px;
+		border: 2px solid #4e4e4e;
+		border-radius: 0;
+		//大項目的checkbox
+		// 如果底下有選，但沒有全選
+		&.indeterminate{
+			border: 2px solid $main-theme;
+			background-color: $main-theme;
+			&::after{
+				background-color: #fff;
+				top: 5px;
+				left: 1px;
+				right: 3px;
+				height: 2px;
+				width: 10px;
+			}
+		}
+		// 如果底選是全選
+		&.checked{
+			border: 2px solid $main-theme;
+			background-color: $main-theme;
+			&::after{
+				border: 1.5px solid #fff;
+				border-left: 0;
+    		border-top: 0;
+				left: 3px;
+				top: 0px;
+				height: 8px;
+				width: 4px;
+			}
+		}
+		&.checked.indeterminate::after{
+			border: 1px solid #fff;
+			top: 5px !important;
+			left: 0px !important;
+			right: 3px;
+			height: 2px !important;
+			width: 10px !important;
+			transform: rotate(0deg) scaleY(0.5);
+		}
+	}
+
+	
+}
+// 條列
+.tree-default-large>.tree-container-ul>.tree-node{
+	border-bottom: 1px solid $border-color !important;
+	padding: 10px 25px !important;
+}
+.tree-arrow{
+	display: none !important;
+}

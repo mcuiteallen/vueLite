@@ -1,0 +1,84 @@
+//-------------------------------特殊的電話輸入
+.vue-phone-number-input{
+	// 選國家
+	.select-country-container{
+		margin-right: 13px !important;
+		
+		#VuePhoneNumberInput_country_selector{
+			padding-left: 40px !important;
+		}
+		// 國旗
+		.field-country-flag{
+			top: 8px !important;
+			left: 6px !important;
+		}
+	}
+	&+.fa-exclamation-triangle{
+		@include PC-small{
+			top: 23px !important;
+		}
+	}
+
+	// 填入號碼
+	.input-phone-number{
+		position: relative;
+		// 錯誤訊息文字
+		.field-label{
+			top: 3px !important;
+			right: 30px !important;
+			left: auto !important;
+		}
+	}
+	.field{
+		.field-input{
+			padding: 0px !important;
+			border: none !important;
+			height: auto !important;
+			min-height: auto !important;
+			border-bottom: 1px solid #aaaaaa !important;
+			border-radius:0px !important;
+		}
+	}
+
+	.country-selector.lg .field-input{
+		padding-left: 36px !important;
+	}
+
+	// 禁止輸入
+	.field.is-disabled{
+		.field-input{
+			background: none !important; 
+			// border-bottom: none !important;
+		}
+		.country-selector-arrow{
+			display: none !important;
+		}
+		.field-label{
+			display: none !important;
+		}
+	}
+}
+.box-phone{
+	position: absolute;
+	left: 24%;
+  bottom: 4px;
+}
+//上面的
+.CountryCode{
+	width: 130px;
+	margin-right: 13px;
+	display: inline-block;
+}
+.CountryPhone{
+	display: inline-block;
+}
+
+small{
+	&.phone-error{
+		padding-left: 24%;
+	}
+}
+
+.phone-error{
+	color: #e22828;
+}

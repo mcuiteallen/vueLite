@@ -1,0 +1,35 @@
+$orignTheme: #9e3398;
+
+//DeviceOn
+//login
+$login-bg-top: var(--loginBgTop, #c0c0c0);
+$login-bg-bottom: var(--loginBgBottom, #575757);
+
+// 背景
+$body-bg: var(--bodyBg, #ebe8ed);
+$header-bg: var(--headerBg, #323233);
+$menu-bg: var(--menuBg, #ffffff);
+$dashbordheader-bg: var(--dashbordheaderBg, #f3f3f3);
+$dashbordcontent-bg: var(--dashbordcontentBg, #ffffff);
+$tabletrodd-bg: var(--tabletroddBg, #ffffff);
+$tabletreven-bg: var(--tabletrevenBg, #f2f2f2);
+
+// 文字
+$text-color: var(--textColor, #323232);
+// 線條
+$border-color: var(--borderColor, #d1d1d1);
+
+// 主色
+$main-theme: var(--mainTheme, $orignTheme);
+$main-theme-light: var(--mainThemeLight, lighten($orignTheme, 50%)); 
+$main-theme-light-2: var(--mainThemeLightMore, lighten($orignTheme, 55%));
+$maindark-theme: var(--mainDarkTheme, darken($orignTheme, 6%));
+
+//nav icon
+$nav-icon: var(--navIcon, #ffffff);
+
+
+
+//screen width
+$pc-middle: 1500px;
+$pc-small: 1400px;

@@ -1,0 +1,222 @@
+// -------------------------------調整數字區間
+// 一條
+.e-slider-track{
+	background: $main-theme !important;
+}
+.e-control-wrapper.e-slider-container.e-horizontal .e-slider-track{
+	height: 2px !important;
+}
+// 灰的
+.e-control-wrapper.e-slider-container.e-horizontal .e-range{
+	height: 2px !important;
+	background-color: #d2d2d2 !important;
+}
+.e-control-wrapper.e-slider-container.e-horizontal.e-slider-btn{
+	padding: 0 45px !important;
+}
+
+// 控制鈕
+.e-control-wrapper.e-slider-container.e-horizontal .e-handle{
+	top: calc(50% - 11px) !important;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-handle.e-handle-start{
+	border: 1px solid #f3f3f3;
+  box-shadow: 0px 1px 3px #646464;
+}
+.e-control-wrapper.e-slider-container.e-material-slider .e-slider .e-handle.e-handle-first{
+	background-color: #ffffff !important;
+	border: 1px solid #f3f3f3 !important;
+  box-shadow: 0px 1px 3px #646464 !important;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-handle{
+	height: 21px !important;
+	width: 21px !important;
+}
+
+// 範圍之外的控制鈕
+.e-control-wrapper.e-slider-container .e-slider .e-handle{
+	background-color: #ffffff !important;
+	border: 1px solid #f3f3f3 !important;
+  box-shadow: 0px 1px 3px #646464 !important;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-handle{
+	background-color: #ffffff !important;
+	border: 1px solid #f3f3f3 !important;
+  box-shadow: 0px 1px 3px #646464 !important;
+}
+
+// 前後
+.e-control-wrapper.e-slider-container.e-horizontal .e-first-button{
+	left: 2px !important;
+}
+.e-control-wrapper.e-slider-container.e-horizontal .e-first-button .e-button-icon{
+	background-image: none !important;
+	background-color: #505050 !important;
+	height: 2px !important;
+	width: 20px !important;
+	top: calc(50% - 0.6px) !important;
+	left: 5px !important;
+}
+.e-control-wrapper.e-slider-container.e-horizontal .e-second-button .e-button-icon{
+	background-image: none !important;
+	background-color: #505050 !important;
+	height: 2px !important;
+	width: 22px !important;
+	top: calc(50% - 0.6px) !important;
+	left: 3.3px !important;
+	&::before{
+		content:"";
+		position: absolute;
+		height: 20px;
+		width: 2px;
+		background-color: #505050 !important;
+		top: -8px;
+    left: 10px;
+	}
+}
+.e-control-wrapper.e-slider-container.e-horizontal .e-first-button{
+	left: 2px !important;
+	background: #ffffff !important;
+	height: 30px !important;
+	width: 30px !important;
+	top: 18px !important;
+	&:hover{
+		background: $main-theme !important;
+		.e-button-icon{
+			background-color: #ffffff !important;
+		}
+	}
+}
+.e-control-wrapper.e-slider-container.e-horizontal .e-second-button{
+	background: #ffffff !important;
+	height: 30px !important;
+	width: 30px !important;
+	margin-top: -15px !important;
+	right: 3px !important;
+	&:hover{
+		background: $main-theme !important;
+		.e-button-icon{
+			background-color: #ffffff !important;
+			&::before{
+				background-color: #ffffff !important;
+			}
+		}
+	}
+}
+
+// -------------------------------vue-slider
+.bar-choose-num{
+	width: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+	//tooltip
+	.vue-slider-tooltip{
+		color: $main-theme !important;
+		border: 1px solid transparent !important;
+		background-color: transparent !important;
+	}
+	.vue-slider-tooltip-wrap.vue-slider-tooltip-top{
+		top: 25px !important;
+	}
+	.vue-slider-dot{
+		width: 25px !important;
+		height: 25px !important;
+		top: -10px !important;
+	}
+
+	&.normal-slide{
+		.vue-slider{
+			width: 100% !important;
+		}
+		.vue-slider-rail{
+			width: 88%;
+    	margin: 0 auto;
+		}
+		.vue-slider-dot{
+			top: 2px !important;
+		}
+		.vue-slider-dot-tooltip-top{
+			line-height: 25px;
+		}
+	}
+
+
+}
+//拉桿
+.vue-slider-component{
+	flex-basis: 215px;
+}
+.vue-slider-component .vue-slider{
+	height: 2px !important;
+}
+.vue-slider-component .vue-slider-process{
+	background-color: #636363 !important;
+}
+
+
+//slide 3.1 版本
+//mark
+.vue-slider-dot{
+	background: $dashbordcontent-bg;
+	width: 28px !important;
+	height: 28px !important;
+	border-radius: 99%;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.37);
+	border: 1px solid #c8c8c8;
+	cursor: pointer;
+	&.vue-slider-dot-disabled{
+		opacity: 0;
+	}
+}
+.vue-slider-rail{
+	background-color:$main-theme-light;
+}
+.vue-slider-process{
+	background-color: $main-theme;
+}
+.vue-slider-dot-tooltip-top{
+	top: 24px !important;
+}
+
+
+.vue-slider-ltr .vue-slider-mark-label{
+	margin-top: 14px;
+}
+.vue-slider-mark{
+	background-color: $main-theme;
+}
+
+
+.RuleAdd{
+	//拉bar
+	.bar-choose-num{
+		width: 100%;
+	}
+	.bar-choose-num.normal-slide .vue-slider-rail{
+		width: 97%;
+	}
+
+
+	.rangeAction{
+		.vue-slider-rail{
+			background-color: $main-theme;
+		}
+		.vue-slider-process{
+			background-color: $main-theme-light-2;
+		}
+	}
+}
+
+.swiper-container{
+	.swiper-button-disabled{
+		display: none;
+	}
+}
+
+
+
+.swiper-button-prev, .swiper-button-next{
+	color: $main-theme !important;
+}

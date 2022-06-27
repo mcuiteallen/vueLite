@@ -1,0 +1,17 @@
+@mixin flex-center () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 1500
+@mixin PC-middle (){
+  @media (max-width:$pc-middle){@content;}
+}
+
+// 1400
+@mixin PC-small (){
+  @media (max-width:$pc-small){@content;}
+}
+
+

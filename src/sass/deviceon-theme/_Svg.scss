@@ -1,0 +1,318 @@
+$svg-small:32px;
+$svg-big:42px;
+
+// 父層標籤開始
+.btn-svg{
+  cursor: pointer;
+
+  //狀態--正常
+  use{
+    color: $text-color;
+  }
+  svg{
+    width: $svg-small;
+    height: $svg-small;
+    border-radius: 40%;
+    transition: all 0.3s;
+  }
+  &:hover{
+    use{
+      color: #ffffff;
+    }
+    svg{
+      border-radius: 50%;
+      background-color: $main-theme;
+    }
+  }
+
+  // 狀態--正常 (但icon要彩色的)
+  &.svg-colorful{
+    color: $main-theme;
+    use{
+      color: $main-theme;
+    }
+    svg{
+      border-radius: 50%;
+    }
+    &.svg-border{
+      svg{
+        border: 1px solid $main-theme;
+      }
+    }
+    &:hover{
+      use{
+        color: #ffffff;
+      }
+      svg{
+        border-radius: 50%;
+        background-color: $main-theme;
+      }
+    }
+  }
+  &.svg-show-unavailable{
+    cursor: initial;
+    use{
+      color: $main-theme;
+    }
+    svg{
+      width: 70px;
+      height: 70px;
+    }
+    &:hover{
+      use{
+        color: $main-theme;
+      }
+      svg{
+        background-color: transparent;
+      }
+    }
+  }
+  //異常監測
+  &.w150px{
+    svg{
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  // 狀態--正在執行(tool列表中的icon)
+  &.isActive{
+    use{
+      color: #ffffff;
+    }
+    svg{
+      border-radius: 50%;
+      background-color: $main-theme;
+    }
+  }
+  
+  // 狀態--不可點擊
+  &.device-action-disable{
+    opacity: 0.5;
+    pointer-events: none;
+    use{
+      color: $text-color;
+    }
+    svg{
+      border-radius: 50%;
+    }
+    &.svg-border{
+      svg{
+        border: 1px solid $text-color;
+      }
+    }
+    &.opacity0{
+      opacity: 0;
+    }
+  }
+
+
+  &.svg-noPadding{
+    padding: 0;
+    width: $svg-small;
+    height: $svg-small;
+  }
+
+  &.svg-smallMargin{
+    margin: 0 4px;
+    width: $svg-small;
+    height: $svg-small;
+  }
+
+  &.svg-big{
+    svg{
+      width: $svg-big;
+      height: $svg-big;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0px 5px !important;
+  }
+}
+
+
+.event-none{
+  pointer-events: none;
+}
+
+//在Widget的heade
+.btn-showModal{
+  &:hover{
+    &+svg{
+      border-radius: 50%;
+      .svg-bg{
+        fill:$main-theme;
+      }
+      .svg-color{
+        fill:#ffffff;
+      }
+    }
+  }
+  &.isActive{
+    &+svg{
+      border-radius: 50%;
+      .svg-bg{
+        fill:$main-theme;
+      }
+      .svg-color{
+        fill:#ffffff;
+      }
+    }
+  }
+}
+
+.title-category.hidden{
+  &+.box-content{
+    .btn-showModal{
+      &+svg{
+        border-radius: 50%;
+        background-color: $main-theme;
+        margin-bottom: -12px;
+        use{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+//echart icon
+.active-button{
+  opacity: 1;
+  use{
+    color: $main-theme;
+  }
+  .svg-bg{
+    fill:$main-theme;
+  }
+  .svg-color{
+    fill:#ffffff;
+  }
+}
+
+.disactive-button{
+  opacity: 0.6 !important;
+  use{
+    color: $text-color;
+  }
+  .svg-bg{
+    fill:$text-color;
+  }
+  .svg-color{
+    fill:#ffffff;
+  }
+}
+
+//頁碼
+.btn-svg-page{
+  svg{
+    width: $svg-small;
+    height: $svg-small;
+    fill: $text-color;
+  }
+}
+
+.VueTables__table{
+  th{
+    use{
+      color: #ffffff;
+    }
+  }
+
+}
+.VueTables.forModal {
+  th{
+    use{
+      color: $text-color;
+    }
+    .btn{
+      &:hover{
+        use{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+// control
+.bar-goto{
+  &:hover{
+    use{
+      color: #ffffff;
+    }
+  }
+}
+
+// table tr 被選到時
+.focusTr{
+  .btn-svg{
+    use{
+      color: #ffffff;
+    }
+    svg{
+      border-radius: 50%;
+      background-color: $main-theme;
+    }
+  }
+}
+
+
+// collaps
+.isopen{
+  .btn-svg{
+    use{
+      color: #ffffff;
+    }
+    svg{
+      border-radius: 50%;
+      background-color: $main-theme;
+    }
+  }
+}
+
+
+//if btn has text
+.btn-svg.hasTxT{
+  svg{
+    z-index: 2;
+    position: relative;
+    use{
+      color: #ffffff;
+    }
+    svg{
+      border-radius: 50%;
+      background-color: $main-theme;
+    }
+  }
+  span{
+    position: relative;
+    vertical-align: inherit;
+    margin-left: -32px;
+    margin-right: 10px;
+    border: 1px solid $main-theme;
+    padding: 6px 12px 6px 34px;
+    border-radius: 21px;
+    transition: all 0.3s;
+    z-index: 1;
+    background-color: $main-theme;
+    color: #ffffff;
+  }
+}
+
+
+.item-title{
+  .btn-svg.svg-noPadding{
+    width: 20px;
+    height: 20px;
+    margin-top: -6px;
+    margin-left: 4px;
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.AppNavbar{
+  .v-popover{
+    &.open{
+      background: #0f1010;
+      border-radius: 50%;
+    }
+  }
+  
+}
+.pointEvent_no{
+  pointer-events: none;
+}
+.PopoverContent{
+  .vuestic-collapse{
+    border-bottom:1px solid $border-color;
+    font-size: 16px;
+    border-radius: 0;
+    overflow: inherit;
+    &__header{
+      .btn{
+        font-size: 16px;
+        line-height: 2.5;
+      }
+      .fas{
+        position: absolute;
+        top: 51%;
+        right: 12px;
+        font-size: 20px;
+        transform: translate(-50%,-50%) rotate(0deg);
+        transition: all 0.3s;
+      }
+      &.isopen{
+        .fas{
+          transform: translate(-50%,-50%) rotate(90deg);
+        }
+        .btn{
+          background-color: $main-theme-light;
+          span{
+            color: $main-theme;
+          }
+        }
+      }
+      &__button{
+        padding: 0;
+        padding-left: 15px;
+        position: relative;
+      }
+    }
+    a{
+      color: $text-color;
+      font-size: 15px;
+      &:hover{
+        color: #ffffff;
+      }
+    }
+  }
+
+  .vuestic-collapse + .vuestic-collapse{
+    margin-top: 0px;
+  }
+  a{
+    width: 100%;
+  }
+
+}
+
+//鈴鐺
+.alert-dot {
+  position: absolute;
+  top: -2px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  letter-spacing: -1px;
+  @include media-breakpoint-down(sm){
+    top: 1px;
+    left: 17px;
+    width: 16px;
+    height: 16px;
+  }
+  span{
+    font-size: 12px;
+    color: #ffffff;
+    position: absolute;
+    left: 47%;
+    top: 49%;
+    transform: translate(-50%,-50%);
+  }
+  &-small{
+    width: 10px;
+    height: 10px;
+    top: 1px;
+    left: 22px;
+  }
+}
+
+
+.app-store-mode{
+  .vuestic-navbar__logo{
+    left: 30px !important;
+  }
+}
+
+

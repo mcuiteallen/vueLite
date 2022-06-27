@@ -1,0 +1,205 @@
+//Buttons
+.btn{
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: $text-color;
+  border-radius:0px;
+  white-space: nowrap;
+  cursor: pointer;
+  @include PC-small{
+    font-size: 14px;
+  }
+  // 主色
+  &-primary{
+    color: $main-theme;
+    border: 1px solid $main-theme;
+    background-color: transparent;
+    &:hover{
+      color: #ffffff;
+      border-color: $main-theme;
+      background-color: $main-theme;
+    }
+    &.solidButton{
+      color: #ffffff;
+      border-color: $main-theme;
+      background-color: $main-theme;
+    }
+  }
+  // 黑色
+  &-secondary{
+    color: $text-color;
+    border: 1px solid $text-color;
+    background-color: transparent;
+    &:hover{
+      color: #ffffff;
+      border-color: $text-color;
+      background-color: $text-color;
+    }
+    &.solidButton{
+      color: #ffffff;
+      border-color: $text-color;
+      background-color: $text-color;
+    }
+    &:disabled{
+      opacity: 0.2;
+      border-color: $text-color;
+    }
+  }
+  
+  &:focus, &.focus{
+    box-shadow:none;
+  }
+}
+
+.btn.btn-primary.isFocus{
+  background-color: $main-theme;
+  color: #ffffff;
+  font-weight: initial;
+}
+
+.btn{
+  position: relative;
+  border-radius: 4px !important;
+  @include media-breakpoint-down(sm) {
+    margin: 6px 0;
+  }
+}
+
+// 不可點擊
+.btn.disabled, .btn:disabled{
+  color: $text-color;
+  cursor: no-drop;
+  pointer-events: none;
+  opacity: 0.3;
+}
+// 不可點擊
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus{
+  box-shadow: none !important;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+  background-color: $main-theme;
+  border-color: $main-theme;
+}
+.btn-primary.disabled, .btn-primary:disabled{
+  color: $main-theme !important;
+  background-color: transparent;
+  border-color: $main-theme;
+}
+.disbleButton{
+  background: rgba(0,0,0,0.2) !important;
+  border: 1px solid transparent !important;
+  color: #ffffff !important;
+  pointer-events: none !important;
+}
+
+.btn-primary.disable{
+  color: rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: transparent;
+  pointer-events: none;
+}
+
+
+//對齊
+.btn-group-right{
+  width: 100%;
+  text-align: right;
+}
+// popup
+.btn-box{
+	width: 100%;
+}
+
+
+
+
+
+// 寬度
+.btn-middle{
+  width: 200px;
+}
+.btn-small{
+  height: 34px;
+  max-width: 170px;
+  line-height: 23px;
+  display: block;
+  cursor: pointer;
+  @include media-breakpoint-down(sm){
+    font-size: 13px;
+    width: auto;
+    padding: 5px 10px;
+  }
+}
+.btn-width-small{
+  width: 135px;
+  margin-left: 10px;
+}
+.btn-width-auto{
+  width: auto;
+}
+
+
+// 特殊按鈕樣式
+.btn-more{
+  width: auto;
+  padding: 4px 10px 2px;
+  font-size: 14px;
+  border-radius: 14px;
+  @include PC-small{
+    padding: 4px 8px 2px;
+    font-size: 13px;
+  }
+}
+
+.btn-eye{
+  position: absolute;
+  right: -37px;
+  top: -1px;
+}
+
+.theme-Dark{
+  .btn{
+    &:hover{
+      color: $text-color;
+    }
+  }
+}
+
+.btn-radio{
+	display: inline-block;
+	width: 40px;
+	padding: 0;
+}
+
+.vuestic-collapse__header__button{
+  border-radius: 0px !important;
+}
+
+
+// 步驟
+.wizard-body-actions {
+  justify-content: flex-end !important;
+  .btn-container {
+    width: auto !important;
+    text-align: right;
+    @include PC-small{
+      margin: 0px 8px 0px;
+    }
+    .btn{
+      height: 32px;
+      width: 140px;
+    }
+  }
+}
+
+
+.swal2-actions{
+  button{
+    width: 200px !important;
+  }
+}
+
+.more-function{
+  transform: rotate(90deg);
+}

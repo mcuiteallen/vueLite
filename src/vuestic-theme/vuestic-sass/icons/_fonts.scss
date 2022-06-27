@@ -1,0 +1,34 @@
+// Fonts
+
+//英文字體
+@font-face {
+font-family: 'Source Sans Pro Bold';
+font-style: normal;
+font-weight: 600;
+src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(fonts/SourceSansPro-Bold.woff) format('woff');
+}
+@font-face {
+font-family: 'Source Sans Pro Regular';
+font-style: normal;
+font-weight: 400;
+src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(fonts/SourceSansPro-Regular.woff) format('woff');
+}
+
+//繁體字體
+// @font-face {
+// font-family: 'Noto Sans TC';
+// src: url(fonts/NotoSansTC.woff) format('woff');
+// }
+
+//簡體字體
+// @font-face {
+// font-family: 'Noto Serif SC';
+// src: url(fonts/NotoSansSC-Medium.woff) format('woff');
+// }
+
+
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Source+Sans+Pro&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Source+Sans+Pro&display=swap');

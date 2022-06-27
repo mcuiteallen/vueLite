@@ -1,0 +1,151 @@
+//過濾搜尋
+.input-serch-box{
+	margin-right: -36px;
+  padding-right: 30px !important;
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
+	&+button{
+		width: 40px;
+		opacity: 0.5;
+    padding: 0;
+		cursor: auto !important;
+		pointer-events: none;
+		svg{
+			cursor: auto;
+		}
+		@include media-breakpoint-down(sm){
+			display: none;
+		}
+		.phone-show{
+			display: none;
+			@include media-breakpoint-down(sm){
+				display: block;
+			}
+		}
+	}
+}
+
+.clearkeyword-icon{
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.serch-phone-show{
+	input{
+		width: 100%;
+	}
+	button{
+		width: 40px;
+	}
+	.serch-box-has-select-type{
+		@include media-breakpoint-down(sm){
+			display: flex;
+			width: 100%;
+		}
+		.vuestic-simple-select{
+			width: 140px;
+		}
+	}
+	.clearkeyword-icon{
+    margin-left: -25px;
+    padding-right: 15px;
+
+	}
+}
+
+// 搜尋有包含選擇type
+.serch-box-has-select-type{
+	height: 36px;
+	display: flex;
+	align-items: center;
+  border-radius: 4px;
+	border: 1px solid #aeaeae;
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
+
+	.vuestic-simple-select{
+		width: 125px;
+		height: 36px;
+    padding-left: 8px;
+    margin-right: 8px;
+    padding-right: 6px;
+		border-right: 1px solid #aeaeae;
+		input{
+			font-size: 14px;
+			background: transparent !important;
+		}
+	}
+	.form-group{
+		margin-top: 0;
+		margin-bottom: 0;
+		.bar{
+			border: none;
+		}
+		.input-group{
+			display: flex;
+    	align-items: center;
+		}
+		&.with-icon-right .input-icon{
+			top: 9px !important;
+		}
+	}
+
+	.input{
+		padding: 0px;
+		border: none;
+		background: transparent !important;
+		&:focus{
+			border: none !important;
+		}
+	}
+
+	&+button{
+		display: none;
+		@include media-breakpoint-down(sm){
+			display: block;
+		}
+	}
+	.fas.fa-times{
+		cursor: pointer;
+		background: $body-bg;
+		padding: 0 15px;
+		&:hover{
+			color: $main-theme;
+		}
+	}
+
+}
+
+
+.AccountList{
+	.account-tool-nav{
+		.serch-box-has-select-type{
+			@include media-breakpoint-down(md){
+				display: none;
+			}
+		
+			.input-serch-box{
+				@include media-breakpoint-down(md){
+					display: none;
+				}
+			}
+			&+button{
+				display: none;
+				@include media-breakpoint-down(md){
+					display: block !important;
+				}
+			}
+		}
+	}
+
+	.serch-phone-show{
+		.serch-box-has-select-type{
+			width: 93%;
+			button{
+				margin-right: -40px;
+			}
+		}
+	}
+}

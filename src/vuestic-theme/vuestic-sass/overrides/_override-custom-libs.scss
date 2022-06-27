@@ -1,0 +1,286 @@
+.form-check{
+  padding-left: 30px;
+
+  // can't see
+  .form-check-input{
+    opacity: 0;
+    z-index: 1;
+    margin-top: 0;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 21px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .form-check-label {
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+  }
+
+  label {
+    &::before{
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: -28px;
+      transform: translateY(-50%);
+      border: 2px solid $text-color;
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 42%;
+      left: -25px;
+      transform: translateY(-50%);
+      font-family: "Ionicons";
+      font-size: 0px;
+      content: "\F2BC";
+      color: #ffffff;
+    }
+  }
+
+  input[type="checkbox"]{
+    &:checked + label::before{
+      border: 2px solid $main-theme;
+      background-color: $main-theme;
+    }
+    &:checked + label::after{
+      font-size: 15px;
+    }
+    
+    &:focus + label::before{
+      outline: none;
+    }
+    &:disabled + label{
+      opacity: 0.5;
+    }
+  }
+  
+}
+
+
+.form-radio {
+  padding-left: 30px;
+  position: relative;
+  // border: 1px solid;
+  // can't see
+  .form-check-input{
+    opacity: 0;
+    z-index: 1;
+    margin-top: 0;
+    margin-left: 0;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .form-check-label{
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+  }
+
+  label{
+    &::before{
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: -28px;
+      transform: translateY(-50%);
+      border: 2px solid $text-color;
+      border-radius: 50%;
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      top: 50%;
+      left: -24px;
+      transform: translateY(-50%);
+      background-color: $main-theme;
+      border-radius: 50%;
+    }
+  }
+
+  input[type="radio"]{
+    &:checked + label::after{
+      width: 8px;
+      height: 8px;
+    }
+    &:focus + label::before{
+      outline: none;
+    }
+    &:disabled + label{
+      opacity: 0.5;
+    }
+  }
+
+}
+
+input[type=checkbox]:disabled + label, input[type=radio]:disabled + label,
+input[type=checkbox]:disabled, input[type=radio]:disabled {
+  cursor: not-allowed;
+}
+
+.tooltip.vuestic-tooltip {
+  margin-top: 12px;
+  border-radius: 0;
+  max-width: 325px;
+  background: transparent;
+  
+  &.open{
+    opacity:1;
+  }
+
+  .tooltip-inner {
+    border-radius: 0;
+    padding: 0;
+    background-color: #ffffff;
+    h5{
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  //三角形
+  .tooltip-arrow {
+    @extend .arrow;
+  }
+  &[x-placement^="top"] {
+    @extend .bs-tooltip-top;
+  }
+  &[x-placement^="bottom"] {
+    @extend .bs-tooltip-bottom;
+  }
+  &[x-placement^="right"] {
+    @extend .bs-tooltip-right;
+    margin-left: .15rem;
+  }
+  &[x-placement^="left"] {
+    @extend .bs-tooltip-left;
+    margin-right: .15rem;
+  }
+  &.popover {
+    .popover-header, 
+    .popover-body {
+      text-align: left;
+      padding-right: 0;
+      color: #333333;
+    }
+
+    .popover-inner {
+      max-width: 100%;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+      > * {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .popover-header {
+      font-weight: $popover-header-font-weight;
+    }
+
+    .popover-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $popover-icon-color;
+      font-size: $popover-icon-size;
+    }
+    .popover-content{
+      width: 100%;
+    }
+    .popover-content:first-child {
+      .popover-header,
+      .popover-body {
+        padding:  $popover-body-padding-y $popover-header-no-icon-padding-x;
+        padding-right: 0;
+      }
+    }
+
+    &[x-placement^="top"] {
+      @extend .bs-popover-top;
+    }
+
+    // &[x-placement^="bottom"] {
+    //   @extend .bs-popover-bottom;
+    // }
+
+    &[x-placement^="right"] {
+      @extend .bs-popover-right;
+    }
+
+    &[x-placement^="left"] {
+      @extend .bs-popover-left;
+    }
+  }
+}
+
+
+//vue-toasted
+.toasted-container {
+  &.full-width {
+    max-width: 100%;
+    width: calc(100% - #{$layout-padding} - #{$layout-padding-right});
+    transform: translateX(0);
+    left: 0;
+
+    .toasted.vuestic-toast {
+      max-width: 100%;
+      width: 100%;
+      left: $layout-padding;
+      justify-content: normal;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: calc(100% - #{$content-mobile-wrap-pl} - #{$content-mobile-wrap-pr});
+      left: 0;
+
+      .toasted.vuestic-toast {
+        left: $content-mobile-wrap-pl;
+      }
+    }
+  }
+}
+
+.toasted.vuestic-toast {
+  min-height: $toast-min-height;
+  padding: $toast-padding-y $toast-padding-x;
+  font-size: $toast-font-size;
+  font-weight: $toast-font-weight;
+  line-height: $toast-line-height;
+  background: rgba($toast-bg, 0.9);
+  box-shadow: $toast-box-shadow;
+  color: $toast-color;
+  border-radius: $toast-border-radius;
+
+  i, i.fa {
+    font-size: $toast-icon-size;
+    color: $toast-icon-color;
+    margin-left: $toast-icon-ml;
+    margin-right: $toast-icon-mr;
+  }
+
+  a.action:hover {
+    text-decoration: none;
+  }
+}

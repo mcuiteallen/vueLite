@@ -1,0 +1,18 @@
+{
+	"menus": [
+		{
+			"enable": true,
+			"label": "iEdge",
+			"router": "portals",
+			"menuPublicPath": "/static/portals",
+			"menu": [
+				{
+					"enable": true,
+					"label": "Overview",
+					"router": "/",
+					"path":"/iEdge/#/DeviceList"
+				}
+			],"ServerAppIcon": "/iEdge/static/logo/iEdge_icon_app.jpg"
+		}
+	]
+}

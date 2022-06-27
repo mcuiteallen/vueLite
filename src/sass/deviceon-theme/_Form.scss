@@ -1,0 +1,159 @@
+// input
+.form-group{
+	input, textarea{
+		font-size: 15px;
+	}
+	
+	// 如果出錯的時候
+	&.fixd-small-text{
+		position: absolute;
+		bottom: -23px;
+		
+	}
+
+	// 如果input是isabled 狀態
+	.control-label{
+		&.Disabled{
+			top: -17px;
+			left: -1px;
+			color: $text-color !important;
+			font-size: 14px !important;
+		}
+	}
+
+	// 如果輸入正確出現打勾
+	.fa-check{
+		top: -5px;
+	}
+
+
+	.bar{
+		&.Disabled{
+			display: none;
+		}
+	}
+
+	// 如果有eyes
+	&.with-icon-eyes{
+		.with-icon-right input{
+			padding-right: 4rem;
+		}
+
+		//眼睛
+		.btn-eye{
+			top: 24px;
+			right: 0;
+			@include PC-small{
+				top: 15px;
+			}
+			@include media-breakpoint-down(xs){
+				top: 5px;
+			}
+		}
+
+		.left-has-eye + .btn-eye{
+			right: 27px;
+		}
+	}
+
+	input{
+		padding:0;
+	}
+
+	//錯誤訊息
+	.text-danger.position-absolute{
+		position: absolute;
+		&+.btn-eye{
+			bottom: 0;
+		}
+	}
+
+}
+
+.form-control:focus{
+	box-shadow: none;
+}
+
+.input{
+	border: 1px solid $border-color;
+	background: $body-bg;
+	height: 32px;
+	padding: 10px;
+	border-radius: 5px;
+	transition: all 0.3s;
+	&:focus{
+		background: $dashbordcontent-bg;
+		border: 1px solid $main-theme-light;
+	}
+}
+
+.form-group .control-label{
+	color: #aaaaaa;
+}
+.form-group input:valid ~ .control-label{
+	color: $text-color;
+}
+
+.inputSmallHeight{
+	height: 20px !important;
+}
+
+.limit-height-input{
+	height: 29px;
+}
+
+
+.vuestic-modal{
+	.input{
+		background: $dashbordcontent-bg;
+	}
+	.v-page-goto-input{
+		background: $dashbordcontent-bg;
+	}
+	.form-group{
+		@include PC-small{
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+
+.flatpickr-input{
+	border: 0 !important;
+	border-bottom: 1px solid gray !important;
+}
+
+// 套件的css修改
+.date-time-picker{
+	.field-input{
+		height: 28px !important;
+		min-height: 28px !important;
+		border: 1px solid $border-color !important; 
+		font-size: 16px !important;
+		background-color: transparent !important;
+		@include PC-small{
+			font-size: 15px !important;
+			height: 25px !important;
+			min-height: 25px !important;
+		}
+	}
+}
+
+
+.datepicker-container .datepicker-controls{
+	height: 40px !important;
+}
+.week-days{
+	height: 13px !important;
+}
+.datepicker-container .datepicker-days .datepicker-day{
+	height: 34px !important;
+}
+.datepicker-container{
+	height: 230px;
+}
+
+
+
+
+

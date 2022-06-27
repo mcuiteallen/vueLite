@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="16" cy="16" r="16" fill="none"/>
+        <g stroke="#FFF">
+            <path d="M16 3.925V22.47M13.172 6L16 3.172 18.828 6"/>
+        </g>
+        <g stroke="#FFF">
+            <path d="M22 22.47c0-4.851.087-10.39 3.49-13.462M22.47 8l3.94.694-.695 3.939"/>
+        </g>
+        <g stroke="#FFF">
+            <path d="M10.179 22.47c0-4.851-.088-10.39-3.49-13.462M9.622 8.154l-3.939.695.695 3.939"/>
+        </g>
+        <path stroke="#FFF" d="M6 19v6h20v-6"/>
+    </g>
+</svg>

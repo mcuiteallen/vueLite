@@ -1,0 +1,22 @@
+{
+  "config": {
+    "title": "iEdge-Server",
+    "share": true,
+    "desc": "This is test for iEdge Server Portal",
+    "keywords": null,
+    "icon": {
+      "name": "D:\\iEdgeDev\\iEdge-server-addins\\dist\\static\\logo\\iEdge_icon_app.jpg"
+    },
+    "image1": null,
+    "image2": null,
+    "image3": null,
+    "image4": null,
+    "image5": null,
+    "version": "1.0.0",
+    "dir-ui-full": "D:\\iEdgeDev\\iEdge-server-addins\\dist",
+    "dir-ui-part": "",
+    "dir-worker": null,
+    "dir-api": null,
+    "dir-app": null
+  }
+}

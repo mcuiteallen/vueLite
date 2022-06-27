@@ -1,0 +1,28 @@
+{
+  "config": {
+    "title": "DeviceOn/iEdge",
+    "share": true,
+    "desc": "DeviceOn/iEdge (Intelligent Edge) is an industrial app that enables effective equipment management for optimized productivity. \n\nIt provides equipment connectivity with standard industrial protocol support (Modbus, OPC-UA, ODBC…etc.), an easy and user-friendly interface for equipment status monitoring and management, a reaction rule engine, and abnormality notification functions for real-time equipment reaction and preventative maintenance.",
+    "keywords": "iEdge",
+    "icon": {
+      "name": "D:\\iEdgeDev\\deviceon-webapp\\dist\\static\\logo\\iEdge_icon_app.jpg"
+    },
+    "image1": {
+      "name": "C:\\Users\\allen.kao\\Desktop\\CandyWrapper\\1.JPG"
+    },
+    "image2": {
+      "name": "C:\\Users\\allen.kao\\Desktop\\CandyWrapper\\2.JPG"
+    },
+    "image3": {
+      "name": "C:\\Users\\allen.kao\\Desktop\\CandyWrapper\\3.jpg"
+    },
+    "image4": null,
+    "image5": null,
+    "version": "2.0.0",
+    "dir-ui-full": "D:\\iEdgeDev\\deviceon-webapp\\dist",
+    "dir-ui-part": "",
+    "dir-worker": null,
+    "dir-api": null,
+    "dir-app": null
+  }
+}

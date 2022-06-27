@@ -1,0 +1,138 @@
+.AuthLayout{
+	height: 100vh;
+	display: flex;
+  align-items: center;
+	justify-content: center;
+	padding: 0 15px;
+	position: relative;
+	// background-color: #d0d0d0;
+	background: linear-gradient(45deg, $login-bg-bottom, $login-bg-top);
+	// background: linear-gradient(45deg, #1268b4, #ad57b7);
+	
+	//框架
+	.main{
+		margin: 0 auto;
+		background: #ffffff;
+		box-shadow: -12px 16px 28px rgba(37, 37, 37, 0.38);
+		overflow: hidden;
+		border-radius: 7px;
+		width: 1300px;
+		height: 760px;
+		z-index: 1;
+		@include PC-small{
+			height: 580px;
+			width: 1000px;
+		}
+	}
+
+	//logo
+	.logoimg{
+		max-width: 400px;
+		max-height: 75px;
+		margin-bottom: 12px;
+		@include PC-small{
+			max-width: 326px;
+		}
+		@include media-breakpoint-down(lg){
+			width: 67%;
+		}
+		&.deviceOn-logo{
+			margin-left: -19px;
+			max-width: 500px;
+			max-height: 130px;
+			width: 376px;
+			@include PC-small{
+				width: 300px;
+			}
+		}
+	}
+
+
+	// title
+	.title-small{
+		font-size: 16px;
+    font-weight: initial;
+	}
+	.title-welcome{
+		color: $main-theme;
+		margin-bottom: 6px;
+		font-size: 20px;
+    letter-spacing: 0.5px;
+	}
+
+	//右邊的公司形象圖
+	.companyphto{
+		width: 100%;
+		height: 100%;
+		margin-left: 1px;
+		background-size: cover;
+    background-position: center;
+	}
+
+	// 內容
+	.box-auth-inner{
+		width: 100%;
+    height: auto;
+		padding: 40px 20px 40px 40px;
+		@include PC-small{
+			padding: 0px 0px 0px 25px;
+		}
+		@include media-breakpoint-down(md){
+			padding: 40px 20px 40px 20px;
+		}
+	}
+
+	// 相關連結
+	.link-forget-password{
+		color: #004889 !important;
+		text-align: right;
+		span{
+			border-bottom: 1px solid;
+		}
+		&:hover, &.active{
+			span{
+				background-color: rgba(0, 72, 137, 0.2);
+			}
+		}
+		
+	}
+	.link-signup{
+		color: $main-theme !important;
+		text-align: right;
+		span{
+			border-bottom: 1px solid;
+		}
+		&:hover{
+			span{
+				background-color: rgba(145, 48, 140, 0.3);
+			}
+		}
+	}
+
+
+	// 忘記密碼
+	.box-forgotPassword{
+		background: #eaeaea;
+    border: 1px solid #bbbbbb;
+		padding: 12px;
+		position: relative;
+		margin-top: -9px;
+		&::before{
+			content: "";
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			background-color: #eaeaea;
+			right: 31px;
+			top: -5px;
+			border-top: 1px solid #bbbbbb;
+			border-left: 1px solid #bbbbbb;
+			transform: rotate(45deg);
+		}
+	}
+	.forgotPassword-note{
+		color: $main-theme;
+		font-size: 15px;
+	}
+
+}

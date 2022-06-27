@@ -1,0 +1,141 @@
+// 手風琴前面的 + - 按鈕
+.Collapse-isopneIcon{
+	padding-right: 10px;
+}
+.Collapse-Toolicon-right{
+	width: 86%;
+	&-inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-button{
+		display: flex;
+	}
+}
+
+
+//手風琴(設定)
+.collapse-setting{
+	border: 1px solid $border-color;
+	margin-bottom: 20px;
+	// header
+	// 給svg
+	.isopen{
+		svg{
+      border-radius: 50%;
+      .svg-bg{
+        fill:$main-theme;
+      }
+      .svg-color{
+        fill:#ffffff;
+      }
+    }
+	}
+	.vuestic-collapse__header{
+		cursor: pointer;
+	}
+	.vuestic-collapse__header__button{
+		background: $dashbordheader-bg !important;
+		height: 50px;
+		margin: 0;
+	}
+	.no-header-color{
+		.vuestic-collapse__header__button{
+			background: transparent !important;
+			height: auto;
+		}
+	}
+
+	.vuestic-collapse__body.overflow-toggle{
+		overflow: inherit !important;
+	}
+
+	.body-note{
+		background: $main-theme-light;
+    border-top: 1px solid $main-theme;
+    border-bottom: 1px solid $main-theme;
+		padding: 23px;
+		@include PC-small{
+			padding: 10px 23px;
+			font-size: 14px;
+		}
+	}
+	.body-text{
+		padding: 35px 23px 30px;
+		background: $dashbordcontent-bg;
+	}
+	&.body-bg-white{
+		.vuestic-collapse__body{
+			background-color: $dashbordcontent-bg;
+		}
+	}
+}
+
+.collapse-closeToggle {
+	cursor: default !important;
+}
+
+
+.collapse-dontClick{
+	cursor: auto;
+  pointer-events: none;
+	.vuestic-collapse__small-note{
+		color: #aaaaaa;
+		opacity: 0.5;
+	}
+	.vuestic-collapse__header.isopen span{
+		color: #aaaaaa;
+		opacity: 0.5;
+	}
+	.btn-svg {
+		opacity: 0.5;
+		svg{
+			&.svg-purple{
+				.svg-color{
+					fill: #aaaaaa;
+				}
+				&:hover{
+					.svg-bg{
+						fill: #aaaaaa;
+					}
+					.svg-color{
+						fill: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//限制高度
+.maxHeight-550{
+	.vuestic-collapse__body{
+		max-height: 550px;
+	}
+}
+
+.maxHeight-400{
+	.vuestic-collapse__body{
+		max-height: 400px;
+	}
+}
+
+.maxHeight-150{
+	.vuestic-collapse__body{
+		max-height: 150px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+
+
+
+// .vuestic-collapse__header{
+// 	cursor: pointer;
+// 	.vuestic-collapse__header__button{
+// 		pointer-events: none;
+// 	}
+// }

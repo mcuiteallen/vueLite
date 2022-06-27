@@ -1,0 +1,59 @@
+//-----------------tag
+.vuestic-widget-body{
+	position: relative;
+	background-color: $dashbordcontent-bg;
+}
+// 自創的tag
+.group-device-list{
+	padding: 0 10px;
+	padding-top: 10px;
+	.group-name{
+		border: 1px solid $text-color;
+    padding: 3px 15px;
+    border-radius: 26px;
+		margin: 5px;
+		display: block;
+		overflow: hidden;
+		text-overflow : ellipsis;
+		white-space : nowrap;
+	}
+	&.limitHeight{
+		max-height: 167px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+	}
+}
+.limit-tag-group{
+	height: 30px;
+	overflow: hidden;
+	width: 100%;
+	margin-right: 40px;
+}
+.show-tag-group{
+	padding-bottom: 30px;
+}
+//限高
+.tag-group-limit-height{
+	.vuestic-tag-group{
+		overflow: hidden;
+  	height: 30px;
+	}
+}
+
+
+
+
+.fake-tag-group{
+	pointer-events: none;
+	position: absolute;
+	width: 48px;
+	height: 30px;
+	top: 44%;
+	right: 10px;
+	transform: translateY(-50%);
+	border-radius: 15px;
+	color: $border-color;
+	text-align: center;
+	font-size: 14px;
+	line-height: 30px;
+}

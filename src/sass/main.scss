@@ -1,0 +1,326 @@
+@charset "UTF-8";
+// 變數
+@import "@/vuestic-theme/vuestic-sass/vuestic-styles";
+
+
+// 以下為共同設定的區域
+// 大架構
+@import "./deviceon-theme/reset";
+@import "./deviceon-theme/AllFramework";
+
+//區塊或頁面
+@import "./deviceon-theme/Login";
+@import "./deviceon-theme/Header";
+@import "./deviceon-theme/Footer";
+@import "./deviceon-theme/HtmlLayout";
+
+//細節
+@import "./deviceon-theme/Button";
+@import "./deviceon-theme/Checkbox";
+@import "./deviceon-theme/Radio";
+@import "./deviceon-theme/Svg";
+@import "./deviceon-theme/Collapse";
+@import "./deviceon-theme/ColorStatus";
+@import "./deviceon-theme/Text";
+@import "./deviceon-theme/Select";
+@import "./deviceon-theme/Form";
+@import "./deviceon-theme/Table";
+@import "./deviceon-theme/Tag";
+@import "./deviceon-theme/Loading";
+@import "./deviceon-theme/Tree";
+@import "./deviceon-theme/SliderControl";
+@import "./deviceon-theme/Phone";
+@import "./deviceon-theme/Input";
+@import "./deviceon-theme/Popup";
+@import "./deviceon-theme/Tooltip";
+
+@import "./deviceon-theme/appStore";
+
+
+
+//英文字體
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(fonts/SourceSansPro-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(fonts/SourceSansPro-Regular.woff) format('woff');
+} 
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Source Sans Pro Regular', Arial, Helvetica, sans-serif !important;
+  background-color: #ffffff;
+}
+
+
+
+// ----------------------------大架構--------------------------------//
+#mainLayout{
+  display: flex;
+  max-width: calc(100% - 10vw);
+  width: calc(100% - 10vw);
+  margin: 25px auto;
+  @include media-breakpoint-down(md){
+    max-width: calc(100% - 5vw);
+    width: calc(100% - 5vw);
+  }
+}
+
+#tree-menu{
+  width: 15%;
+  position: fixed;
+  @include media-breakpoint-down(md){
+    width: 20%;
+  }
+  .fa-filter{
+    color: #71aada;
+    position: absolute;
+    top: 8px;
+    left: 9px;
+  }
+  .tree{
+    height: calc(100vh - 78px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  input{
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    height: 30px;
+    box-shadow: inset 0px 1px 2px #dadada;
+    border-radius: 2px;
+    padding: 0 10px 0 30px;
+    margin-bottom: 10px;
+  }
+}
+
+#content{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 85%;
+  margin-left: 17%;
+  // 最左邊
+  .right-item{
+    width: 300px;
+
+    h3{
+      margin: 8px 0;
+    }
+
+    .favorite-ul{
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eeeeee;
+
+      i{
+        font-size: 12px;
+        color:#d0b015;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+    }
+
+
+    >ul {
+      padding-left: 0px;
+
+      li {
+        margin-bottom: 15px;
+        list-style-type: none;
+        cursor: pointer;
+        span{
+          color: #1d79c7;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            border-bottom: 1px solid;
+          }
+
+          &.focusItem{
+            border-left: 3px solid;
+            padding-left: 6px;
+            font-weight: bold;
+          }
+        }
+        
+      }
+    }
+
+    @media (max-width:1000px){
+      display: none;
+    }
+  }
+
+  // content txt
+  .TemplateContent{
+    width: 80%;
+    padding: 0 30px;
+    @include media-breakpoint-down(md){
+      width: 95%;
+    }
+
+    .item-title-2{
+      color: $main-theme;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .item{
+      margin-bottom: 35px;
+    }
+  }
+
+  h5{
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    span{
+      font-size: 15px;
+      margin-left: auto;
+      font-weight: 100;
+      cursor: pointer;
+      .fa-bookmark{
+        font-size: 15px;
+        margin-left: 5px;
+        color:#333333;
+      }
+      .no-bookmark{
+        color: #a2a2a2;
+      }
+      &:hover{
+        .fa-bookmark{
+          color: #a2a2a2;
+        }
+        .no-bookmark{
+          color: #333333;
+        }
+      }
+    }
+
+    .noEvent{
+      pointer-events: none;
+    }
+    
+  }
+
+  //細節內容
+  .item-content{
+    margin-bottom: 20px;
+    .text{
+      line-height: 1.5;
+    }
+  }
+
+  //我的最愛
+  .FavoriteContent{
+    width: 20%;
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+
+    h6{
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    ul{
+      margin-bottom: 20px;
+      li{
+        cursor: pointer;
+        color:#0d5d96;
+        font-weight: 100;
+        margin-bottom: 10px;
+        border-bottom: 1px solid transparent;
+        &:hover{
+          span{
+            border-bottom: 1px solid;
+          }
+        }
+        span{
+          &.active{
+            border-left: 3px solid;
+            padding-left: 6px;
+          }
+        }
+
+      }
+    }
+    .favorite{
+      border-bottom: 1px solid #dddddd;
+      li{
+        color: #d83a8a;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .deleteBookmark{
+      color: #989898;
+    }
+  }
+}
+
+
+
+// ----------------------------套件細節--------------------------------//
+// Tree
+#mainLayout{
+  .tree-arrow{
+    margin-left: 20px;
+    display: block !important;
+    &.has-child{
+      width: 20px;
+      margin-left: 0;
+    }
+  }
+  .tree-arrow.has-child:after{
+    height: 5px;
+    width: 5px;
+  }
+  .tree-root{
+    margin-top: 0;
+  }
+  .tree-node.selected>.tree-content{
+    background-color: #efefef;
+    font-weight: bold;
+  }
+
+  //顯示code區塊
+  .ssh-pre__copy{
+    border:none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 99%;
+    height: 26px;
+    width: 26px;
+    transition: all 0.1s;
+    i{
+      color: #f3f3f3;
+      font-size: 13px;
+    }
+    &:hover{
+      background: #2e74bb;
+    }
+  }
+
+}
+
+
+
+
+

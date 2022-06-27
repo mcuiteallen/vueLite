@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0H32V32H0z"/>
+        <g fill="currentColor" fill-rule="nonzero">
+            <path d="M10.909 0L10.909 15.596 18.806 7.7 19.77 8.664 10.227 18.207 0.684 8.664 1.648 7.7 9.545 15.596 9.545 0z" transform="translate(6 6) matrix(1 0 0 -1 0 18.207)"/>
+            <path d="M19.545 18.409L19.545 19.773 0 19.773 0 18.409z" transform="translate(6 6)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,684 @@
+// talbe
+.VueTables{
+	position: relative;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	border: 1px solid $border-color;
+	font-size: 14px;
+	@include PC-small{
+		margin-bottom: 10px;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 14px;
+	}
+	thead{
+		th{
+			height: 40px;
+			font-weight: initial;
+			color: #ffffff;
+			background: $main-theme;
+			padding: 5px 0px 5px 15px !important;
+			border-left: 1px solid $main-theme-light;
+			&:first-child{
+				border-left: 0px;
+			}
+			@include media-breakpoint-down(sm){
+				padding: 0px 10px !important;
+			}
+			.svg-color{
+				fill: #ffffff;
+			}
+			span{
+				font-size: 13px;
+			}
+			.form-check label::before{
+				border: 2px solid #ffffff;
+				transform: translateY(-70%);
+			}
+			.btn-svg.svg-noPadding{
+				width: 24px;
+				height: 24px;
+			}
+			svg{
+				width: 24px;
+				height: 24px;
+			}
+		}
+		tr{
+			border: none;
+		}
+	}
+	tr{
+		td{
+			padding: 10px 18px;
+			color: $text-color;
+			.form-check label::before{
+				transform: translateY(-70%);
+			}
+			.form-check label::after{
+				transform: translateY(-72%);
+			}
+			@include PC-small{
+				padding: 8px 18px;
+				font-size: 14px;
+			}
+		}
+	}
+	
+	&.forModal{
+		padding-top: 0;
+    border-radius: 0;
+
+		.table-responsive > .table-bordered{
+			border:none;
+		}
+		thead{
+			tr:first-child{
+				border: 1px solid $main-theme;
+				height: 43px;
+			}
+			th{
+				background: $main-theme-light;
+				padding: 5px 11px !important;
+				border-left: 1px solid $main-theme;
+				color: $text-color;
+				&:first-child{
+					border-left: 0px;
+				}
+				.form-check label::before{
+					border: 2px solid $text-color;
+					left: -24px;
+				}
+				.form-check label::after{
+					left: -21px;
+				}
+				.check-deleteAll label::before{
+					border: 2px solid $main-theme !important;
+				}
+			}
+		}
+
+		.form-check label::before{
+			left: -30px;
+		}
+		.form-check label::after{
+			left: -27px;
+		}
+		.VueTables__row{
+			border-bottom: 1px solid $border-color !important;
+		}
+
+		.table-responsive{
+			// overflow-x: initial;
+			min-height: 360px;
+			overflow-y: auto;
+		}
+	}
+
+}
+
+
+// .VueTables__table{
+// 	overflow: hidden;
+// 	border-radius: 14px;
+// 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.59);
+// }
+
+// .table-responsive > .table-bordered{
+// 	border: 1px solid $border-color !important;
+// }
+
+.table{
+	margin-bottom: 0 !important;
+}
+
+.table-infomation{
+	position: absolute;
+	right: 0;
+	top: -48px;
+}
+
+.VueTables__sort-icon{
+	display: none;
+}
+//頁碼
+.VuePagination{
+	display: none;
+}
+
+//每頁出現幾個的東東
+.VueTables__limit {
+	display: none;
+}
+//filter的文字
+.VueTables__search{
+	position: absolute;
+	top: -57px;
+  left: 232px;
+}
+.VueTables__search-field{
+	display: flex;
+	flex-wrap: nowrap;
+  flex-direction: row-reverse;
+	.VueTables__search__input{
+		border: 1px solid $border-color;
+		background: #ffffff;
+		border-radius: 0;
+		width: 100%;
+	}
+}
+// .table-responsive > .table-bordered{
+// 	border: 1px solid $border-color;
+// }
+.table-bordered td, .table-bordered th{
+	border:none;
+}
+.table-striped tbody tr:nth-of-type(odd){
+	border:none;
+	background-color: $tabletrodd-bg;
+
+}
+.table-striped tbody tr:nth-of-type(even){
+	background-color: $tabletreven-bg;
+	border:none;
+}
+.table td, .table th, .table thead th, .table thead td{
+	padding: .5rem 20px;
+}
+.table th{
+	white-space : nowrap;
+}
+.VuePagination__count{
+	display: none;
+}
+
+//ota upgrade
+td.col-link{
+	cursor: pointer;
+	&:hover{
+		.table-link{
+			// border-bottom: 1px solid $main-theme;
+			background-color: rgba(145, 48, 140, 0.158);
+		}
+	}
+}
+
+.table-link{
+	cursor: pointer;
+	color:$main-theme;
+	padding: 0 3px;
+  margin-left: 5px;
+	border-bottom: 1px solid $main-theme;
+}
+
+.VueTables__row{
+	transition: all 0.3s;
+}
+.VueTables__row.focusTr{
+	background-color: $main-theme-light-2 !important;
+	.FocusSVG-Color{
+		svg{
+			border-radius: 50%;
+			.svg-bg{
+				fill:$main-theme;
+			}
+			.svg-color{
+				fill:#ffffff;
+			}
+			.svg-stroke{
+				stroke:#ffffff;
+			}
+			&.svg-schedule{
+				.svg-circle{
+					fill: $main-theme;
+					stroke: $main-theme;
+					stroke-width: 1.5;
+				}
+				.svg-color{
+					fill: #ffffff;
+				}
+			}
+			&.svg-purple{
+				border-radius: 50%;
+        .svg-bg{
+          fill:$main-theme;
+        }
+        .svg-color{
+          fill:#ffffff;
+        }
+        .svg-stroke{
+          stroke:#ffffff;
+        }
+			}
+		}
+		.btn.btn-more{
+			background-color: $main-theme;
+			color: #ffffff;
+
+		}
+	}
+}
+.VueTables__row.focusCol{
+	background-color: $main-theme-light-2 !important;
+	.activeCol{
+		background-color: $main-theme-light !important;
+	}
+}
+
+
+tr.VueTables__child-row{
+	background: #fafafa !important;
+  border-bottom: 1px solid $border-color !important;
+}
+
+// 頁碼
+.v-page-ul{
+	display: flex !important;
+	flex-wrap: nowrap;
+}
+.v-page-total{
+	white-space: nowrap;
+}
+.v-page-goto{
+	display: flex !important;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+
+// 查無筆數
+.VueTables__no-results{
+	border: none !important;
+}
+
+.col_function {
+	width: 5%;
+}
+
+// .resize-handle{
+// 	background: #797898;
+// }
+
+//devicelist頁
+.col_checkbox {
+	width: 5%;
+	text-align: center;
+	.check-deleteAll label::after {
+		top: -5px;
+	}
+	&>div{
+		margin-right: -15px;
+	}
+
+}
+.col_status{
+	width: 40px;
+	text-align: center;
+}
+.col_name{
+	padding: 10px 0px 10px 12px !important;
+
+	&>div{
+		// overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+		max-width: 100px;
+		// @include PC-small {
+		// 	max-width: 180px;
+		// }
+	}
+}
+.col_devicegroups{
+	width: 40px;
+	text-align: center;
+	padding: 10px 0px !important;
+}
+.col-action{
+	min-width: 230px;
+}
+.col_wolmode{
+	// font-size: 15px;
+	white-space: normal;
+	max-width: 150px;
+}
+.col_lock{
+	// font-size: 15px;
+	white-space: normal;
+	max-width: 150px;
+}
+
+//group
+.col_group_name{
+	min-width: 180px;
+	max-width: 200px;
+}
+.col_group_description{
+	min-width: 130px;
+	max-width: 150px;
+}
+.col_group_devices{
+	min-width: 320px;
+	max-width: 350px;
+}
+.col_group_parentGroup{
+	min-width: 200px;
+	max-width: 220px;
+}
+.col_group_subgroups{
+	min-width: 200px;
+	max-width: 220px;
+}
+
+
+//devicedata頁
+.col_sensor{
+	&>div{
+		@include PC-small{
+			max-width: 400px;
+		}
+	}
+}
+.col_data_value{
+	&>div{
+		@include PC-small{
+			max-width: 150px;
+		}
+	}
+}
+
+//rule
+.col_rule_name{
+	div{
+		max-width: 170px;
+	}
+}
+.col_rule_sensorName{
+	div{
+		max-width: 300px;
+	}
+}
+.col_rule_action{
+	div{
+		max-width: 200px;
+	}
+}
+
+//ota
+.col_storageName{
+	max-width: 430px;
+}
+.col_pkgName{
+	max-width: 255px;
+}
+
+//overview online device
+.col_all_devicegroups{
+	min-width: 340px;
+}
+
+
+//account
+.col_account_name{
+	.text-over{
+		max-width: 150px;
+	}
+}
+.col_account_mail{
+	max-width: 245px;
+}
+.col_account_fullname{
+	max-width: 150px;
+}
+
+
+//assign aciton
+.pin_order{
+	div{
+		width: 100px;
+	}
+}
+.type_name{
+	max-width: 200px;
+}
+.action_groups_tag{
+	width: 60px;
+}
+.defined_name{
+	max-width: 300px;
+}
+
+
+//ota
+.col-ota-name{
+	.text-over{
+		max-width: 150px;
+		@include PC-small{
+			max-width: 90px;
+		}
+	}
+}
+
+
+// dashboard and addins
+.col_dashboard_enable{
+	width: 110px;
+}
+.col_dashboard_label{
+	width: 250px;
+	max-width: 300px;
+}
+.col_dashboard_url{
+	max-width: 200px;
+}
+
+
+
+//pagenation
+.v-page--large .v-page-total,
+.v-page--large .v-page-li,
+.v-page--large .v-page-select,
+.v-page--large .v-page-goto,
+.v-page--large .v-page-goto .v-page-goto-input {
+  font-size:16px;
+  height:40px;
+  line-height: 40px;
+}
+.v-page--large .v-page-li{
+  min-width: 40px;
+}
+.v-page--large .v-page-li i{
+  font-size:120%;
+}
+.v-page--large .v-page-goto .v-page-goto-input{
+  width:50px;
+}
+
+.v-page--middle .v-page-total,
+.v-page--middle .v-page-li,
+.v-page--middle .v-page-select,
+.v-page--middle .v-page-goto,
+.v-page--middle .v-page-goto .v-page-goto-input{
+  font-size:14px;
+  height:32px;
+  line-height: 32px;
+  @include media-breakpoint-down(sm){
+    font-size:13px;
+  }
+}
+.v-page--middle .v-page-li{
+  min-width: 20px;
+  width:20px;
+}
+.v-page--middle .v-page-li i{
+  font-size:120%;
+}
+.v-page--middle .v-page-goto .v-page-goto-input{
+  width:50px;
+  margin-right: 5px;
+  @include media-breakpoint-down(sm){
+    width: 28px;
+  }
+}
+
+.v-page--small .v-page-total,
+.v-page--small .v-page-li,
+.v-page--small .v-page-select,
+.v-page--small .v-page-goto,
+.v-page--small .v-page-goto .v-page-goto-input{
+  font-size:12px;
+  height:24px;
+  line-height: 24px;
+}
+
+.v-page--small .v-page-li{
+  min-width: 24px;
+}
+.v-page--small .v-page-li i{
+  font-size:120%;
+}
+.v-page--small .v-page-goto .v-page-goto-input{
+  width:45px;
+}
+
+.v-page-ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 4px;
+  list-style-type: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.v-page-total {
+  display: inline-block;
+  margin: 0 4px;
+  @include media-breakpoint-down(sm){
+    margin: 0 0px;
+  }
+}
+
+.v-page-select{
+  margin: 0 4px;
+}
+
+.v-page-li{
+  margin-right: 8px;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+  border-radius: 4px;
+  svg{
+    fill: $text-color;
+  }
+  &.v-page-first {
+    margin-top: -1px;
+  }
+  &.v-page-last {
+    margin-top: -1px;
+  }
+}
+
+.v-page-li a{
+  color:$text-color !important;
+}
+
+.v-page-li:hover a{
+  color:$main-theme;
+}
+
+.v-page-li-active{
+  border-color: $main-theme;
+  background-color:$main-theme;
+}
+
+.v-page-li-active a{
+  color:#fff;
+}
+
+.v-page-li-active:hover{
+  border-color: $main-theme;
+  background-color:$main-theme;
+}
+
+.v-page-li-active:hover a{
+  color:#fff;
+}
+
+.v-page-prev i,.v-page-next i{
+  color:#666;
+}
+
+.v-page-jump-prev:after,.v-page-jump-next:after{
+  content: "•••";
+  display: block;
+  letter-spacing: 1px;
+  color:#666;
+  text-align: center;
+}
+
+.v-page-jump-prev i,.v-page-jump-prev:hover:after,.v-page-jump-next i,.v-page-jump-next:hover:after{
+  display: none;
+}
+
+.v-page-jump-prev:hover i,.v-page-jump-next:hover i {
+  display: inline;
+  color:$main-theme;
+}
+
+.v-page-select {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.v-page-pager{
+  float: left;
+}
+
+.v-page-goto {
+  float: left;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.v-page-goto-input{
+  padding: 1px 7px;
+  display: inline-block;
+  border: 1px solid $border-color;
+  background-color: $body-bg;
+  background-image: none;
+  transition: border .2s ease-in-out,background .2s ease-in-out,box-shadow .2s ease-in-out;
+  color: $main-theme;
+  border-radius: 5px;
+	transition: all 0.3s;
+	&:focus{
+		background: $dashbordcontent-bg;
+		border: 1px solid $main-theme-light;
+	}
+}
+
+.v-page-goto-input:hover{
+  border-color: $main-theme;
+}
+
+.v-page-disabled{
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.v-page-disabled i {
+  color: #ccc;
+}
+
+.v-page-disabled:hover i {
+  color: #ccc;
+  cursor: not-allowed
+}
+
+.v-icon-angle-left{
+  width: 20px;
+}

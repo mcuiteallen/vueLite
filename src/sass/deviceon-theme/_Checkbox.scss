@@ -1,0 +1,50 @@
+//下拉有假的checkbox
+.icon-haschebox{
+	position: relative;
+	line-height: 40px;
+	padding-left: 15px;
+	&::before{
+		content:"";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border: 2px solid #3e3e3e;
+		cursor: pointer;
+	}
+	//被選取的狀態
+	&.multiselect__option--selected{
+		&::before{
+			border: 2px solid $main-theme;
+			background: $main-theme;
+		}
+		&::after{
+			content: "\F2BC";
+			font-family: "Ionicons";
+			font-size: 15px;
+			position: absolute;
+			top: -1px;
+			right: -7px;
+			width: 20px;
+			height: 20px;
+			color: #ffffff;
+		}
+	}
+}
+
+
+
+.LimitWidth{
+	width: 100%;
+	.label-text{
+		width: 90%;
+		overflow : hidden;
+		text-overflow : ellipsis;
+		white-space : nowrap;
+		margin-right: 10px;
+		vertical-align: text-bottom;
+	}
+}
+
+.check-deleteAll label::before{
+	border: 2px solid #ffffff !important;
+}
